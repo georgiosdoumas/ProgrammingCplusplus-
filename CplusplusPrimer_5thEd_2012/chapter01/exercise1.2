@@ -1,0 +1,21 @@
+//No include statements yet for this simple program
+//I played around putting various negative values on the return statement
+int main()
+{
+    return -1;
+}
+
+//so because I wanted to change the line of retunr to various values , like 
+// return -2
+// return -3 
+// and then examine the value that the linux system has for the last executed program , with
+// echo $? 
+// I created a small bash script to build,run and examine the $? , after each change I did on the value of return
+
+#!/bin/bash
+# build , run and examine the value of echo $?
+BASEDIR="/home/george/Documents/ProgrammingCpp/CppPrimer.5thEd"
+g++ -Wall -o ${BASEDIR}/Exercise1.2 ${BASEDIR}/Exercise1.2.cpp
+${BASEDIR}/Exercise1.2
+echo $?
+exit
