@@ -16,6 +16,9 @@ int main()
 # build , run and examine the value of echo $?
 BASEDIR="/home/george/Documents/ProgrammingCpp/CppPrimer.5thEd"
 g++ -Wall -o ${BASEDIR}/Exercise1.2 ${BASEDIR}/Exercise1.2.cpp
+returnval=$(grep return ${BASEDIR}/Exercise1.2.cpp)  #what is written in the .cpp source-code file
 ${BASEDIR}/Exercise1.2
-echo $?
+system_code=$(echo $?)
+echo "The source code has : $returnval , and by running the program , the OS interprets it as $system_code " 
+echo "edit the value of return n in the source code , and run this script again to see another result"
 exit
