@@ -1,5 +1,6 @@
 #include <iostream>
 #include "Sales_item.h"
+//Using the example program of 1.4.4 as a guide 
 int main() 
 {
     Sales_item current_item,running_item;
@@ -20,5 +21,5 @@ int main()
         std::cout << "And we have " << cnt << " transactions for " << current_item.isbn() << std::endl;
     }
     else std::cout << "No data to process" << std::endl;  // in case of an empty file
-	return 0;
+    return 0;
 }
