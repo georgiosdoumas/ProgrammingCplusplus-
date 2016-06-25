@@ -1,4 +1,4 @@
-//The book has some ommitions,does not re-initialize the guess value,and does not output anything
+//The book has some omissions,does not re-initialize the guess value,and does not output anything
 //Here is a better presentation of the program
 #include <iostream>
 #include <cmath>  //for pow()
