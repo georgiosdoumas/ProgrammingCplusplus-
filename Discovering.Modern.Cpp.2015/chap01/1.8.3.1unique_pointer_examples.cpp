@@ -33,5 +33,8 @@ int main()
               //<< *dpg << " "
               //<< *dp2 << " "
               << *dp3 << std::endl;    // ths still outputs 7 , and then I get the error message about free() ....
+    std::unique_ptr<double[]> darr{new double[3]};
+    for (unsigned i= 0; i < 3; ++i)  darr[i]= i+20;
+    std::cout << darr[2] << std::endl;   //outputs 22
     return 0;
 }
