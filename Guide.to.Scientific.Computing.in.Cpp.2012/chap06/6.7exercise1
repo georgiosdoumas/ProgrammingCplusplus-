@@ -1,0 +1,146 @@
+//file name ComplexNumbers.hpp
+#ifndef COMPLEXNUMBERHEADERDEF
+#define COMPLEXNUMBERHEADERDEF
+#include <iostream>
+class ComplexNumber
+{
+  private:
+    double mRealPart;
+    double mImaginaryPart;
+  public:
+    ComplexNumber();  //default constructor provided by us, we are overriding what the systems provides
+    ComplexNumber(double x, double y=0);
+    ComplexNumber(const ComplexNumber& otherComplex); //our copy-constructor
+    double GetRealPart();
+    double GetImaginaryPart();
+    double CalculateModulus() const;
+    double CalculateArgument() const;
+    ComplexNumber CalculateConjugate() const;
+    void SetConjugate();
+    ComplexNumber CalculatePower(double n) const;
+    ComplexNumber& operator=(const ComplexNumber& z);  //assignment
+    ComplexNumber operator-() const;                    //unary minus
+    ComplexNumber operator+(const ComplexNumber& z) const;  //addition of 2 complex, binary +
+    ComplexNumber operator-(const ComplexNumber& z) const;  //subtraction , binary -
+    friend std::ostream& operator<<(std::ostream& output, const ComplexNumber& z);  //print-out
+    friend double RealPart(const ComplexNumber& y);
+};
+#endif
+
+
+//File name ComplexNumbers.cpp
+#include "ComplexNumbers.hpp"
+#include <cmath>
+// Override default constructor : Set real and imaginary parts to zero
+ComplexNumber::ComplexNumber()
+{
+    mRealPart = 0.0;
+    mImaginaryPart = 0.0;
+}
+ComplexNumber::ComplexNumber(double x, double y)  // Constructor that sets complex number z=x+iy
+{
+    mRealPart = x;
+    mImaginaryPart = y;    //if constructor was called with only 1 arg, sets i-part to 0
+}
+double ComplexNumber::GetRealPart()
+{ return mRealPart;}
+double ComplexNumber::GetImaginaryPart()
+{ return mImaginaryPart; }
+// Method for computing the modulus of a complex number
+double ComplexNumber::CalculateModulus() const
+ { return sqrt(mRealPart*mRealPart + mImaginaryPart*mImaginaryPart); }
+// Method for computing the argument of a complex number
+double ComplexNumber::CalculateArgument() const
+ { return atan2(mImaginaryPart, mRealPart); }
+ComplexNumber ComplexNumber::CalculateConjugate() const
+{
+    ComplexNumber z(mRealPart,-mImaginaryPart);
+    return z;
+}
+void ComplexNumber::SetConjugate()
+ { mImaginaryPart = - mImaginaryPart ; }
+// Method for raising complex number to the power n using De Moivre’s theorem
+// complex number must be converted to polar form first
+ComplexNumber ComplexNumber::CalculatePower(double n) const
+{
+    double cmodulus = CalculateModulus();  //using an allready defined method
+    double argument = CalculateArgument();
+    double mod_of_result = pow(cmodulus, n);
+    double arg_of_result = argument*n;
+    double real_part = mod_of_result*cos(arg_of_result);
+    double imag_part = mod_of_result*sin(arg_of_result);
+    ComplexNumber z(real_part, imag_part); //construct a complex number from the 2 doubles
+    return z;
+}
+ComplexNumber& ComplexNumber::operator=(const ComplexNumber& z)
+{       // Overloading the = (assignment) operator. Returns an Lvalue
+    mRealPart = z.mRealPart;
+    mImaginaryPart = z.mImaginaryPart;
+    return * this;
+}
+ComplexNumber ComplexNumber::operator-() const
+{       // Overloading the unary - operator
+    ComplexNumber w;
+    w.mRealPart = -mRealPart;
+    w.mImaginaryPart = -mImaginaryPart;
+    return w;
+}
+ComplexNumber ComplexNumber::operator+(const ComplexNumber& z) const
+{       // Overloading the binary + operator for addition of 2 complex numbers
+    ComplexNumber w;    //result
+    w.mRealPart = mRealPart + z.mRealPart;
+    w.mImaginaryPart = mImaginaryPart + z.mImaginaryPart;
+    return w;
+}
+ComplexNumber ComplexNumber::operator-(const ComplexNumber& z) const
+{       // Overloading the binary - operator for subtraction
+    ComplexNumber w;
+    w.mRealPart = mRealPart - z.mRealPart;
+    w.mImaginaryPart = mImaginaryPart - z.mImaginaryPart;
+    return w;
+}
+// Overloading the insertion(output) << operator
+std::ostream& operator<<(std::ostream& output,const ComplexNumber& z)
+{           // Format as "(a + bi)" or as "(a - bi)"
+    output << "(" << z.mRealPart << " ";
+    if (z.mImaginaryPart >= 0.0)  output << "+ " << z.mImaginaryPart << "i)";
+    else            // z.mImaginaryPart < 0.0
+      output << "- " << -z.mImaginaryPart << "i)";  // use minus sign
+    return output;
+}
+double RealPart(const ComplexNumber& y)
+ { return y.mRealPart; }
+ 
+ 
+ 
+//File name main.cpp
+#include <iostream>
+#include "ComplexNumbers.hpp"
+int main()
+{
+    ComplexNumber z1(4.0, 3.0),z0(5.3);
+    std::cout << "z0 = " << z0 << "\n";
+    std::cout << "z1 = " << z1 << "\n";
+    std::cout << "It has r-part: " << RealPart(z1)  //calling the friend function
+              << " and i-part " << z1.GetImaginaryPart()
+              << "\n and its conjugate is " << z1.CalculateConjugate() << std::endl;
+    std::cout << "Modulus z1 = " << z1.CalculateModulus() << "\n";
+    std::cout << "Argument z1 = " << z1.CalculateArgument() << "\n";
+    ComplexNumber z2;
+    std::cout << "Before initialization : z2 = " << z2 << "\n";
+    z2 = z1.CalculatePower(3);
+    std::cout << "z2 = z1*z1*z1 = " << z2 << "\n";
+    z2.SetConjugate();
+    std::cout << "z2 = " << z2 << "\n";
+    ComplexNumber z3(-z2);   //using our-copy constructor
+    //z3 = -z2;  //use the above line instead
+    std::cout << "z3 = -z2 = " << z3 << "\n";
+    ComplexNumber z4;
+    z4 = z1 + z2;
+    std::cout << "z1 + z2 = " << z4 << "\n";
+    ComplexNumber zs[2];
+    zs[0] = z1;
+    zs[1] = z2;
+    std::cout << "Second element of zs = " << zs[1] << "\n";
+    return 0;
+}
