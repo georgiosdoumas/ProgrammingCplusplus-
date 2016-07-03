@@ -1,3 +1,6 @@
+//I tried to solve the problem using only what is presented in the book, chapter 1 and Appendixes.
+//So I did not use getline() , or anything fancy. A primitive and brutal solution. And although the 
+//book does not mention stoi , it mentions stof , so I figured that it is acceptable to use stoi. 
 #include <iostream>
 #include <fstream>
 #include <string>
