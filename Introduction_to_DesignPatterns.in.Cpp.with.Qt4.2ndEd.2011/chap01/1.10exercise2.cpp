@@ -69,3 +69,10 @@ int main()
     }
     return 0;
 }
+//Save the source file.cpp in a subdir , and while in that subdir give the commands
+// qmake -project    //it will give the project a name similar to the subdir name
+// qmake
+// make
+//If you do changes to the sourcefile.cpp , you only need to do 
+// make
+//after every change , to recompile
