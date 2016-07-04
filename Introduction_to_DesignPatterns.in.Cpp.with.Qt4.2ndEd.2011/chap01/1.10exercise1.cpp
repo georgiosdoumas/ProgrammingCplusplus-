@@ -19,16 +19,20 @@ int main()
     cin >> fileName;                        //read a filename from user
     ifstream existing_file;           //try to open the file for reading, it will fail if file does not exist 
     existing_file.open( fileName.c_str() );
-    if( existing_file ) //If the filename exists and opened successfully , ask user what to do
+    if( existing_file )       //If the filename exists and opened successfully, ask user what to do
     {
         cout << "File exists, do you want to overwrite it ? (y/n) : " ;
         char ans;
         cin >> ans; 
-        if(ans=='n') 
-          { cout << "Exiting, without overwriting file. Run again,giving other filename." << endl; return 0;}  //file will close at exiting
+        if(ans=='n') {
+           cout << "Exiting, without overwriting file. Run again,giving other filename." << endl; 
+           return 0;  //file closes at exiting
+        }
+        else 
+          existing_file.close();     //the user wants to over-write the file
     }  //else filename given by user does not exist , opening it for reading was a failure
-    ofstream out_file;                  //Preparing a file object for output
-    out_file.open( fileName.c_str() );   //binding the filename (must convert to constant string to pass it as filename), to the out_file object
+    ofstream out_file;                  //Preparing a file object for output (write on the file)
+    out_file.open( fileName.c_str() );  //binding filename (must convert it to const string to pass it as filename) to out_file object
     out_file << strval ;                //contents of strval are writen on this file
     out_file.close();
     
@@ -39,7 +43,7 @@ int main()
     if(inp_file)        /*Make sure the file opened succesfully before attempting to read.*/
     { 
         int lucky2;
-        inp_file >> newstr >> lucky2;  //reading from the opened input file, and assigning values to newstr="luckynumber:" , lucky2=7
+        inp_file >> newstr >> lucky2;  //reading from input file, and assigning values to newstr="luckynumber:", lucky2=7
         if (lucky != lucky2)  cerr << "ERROR! wrong " << newstr << lucky2 << endl;
         else  cout << newstr << " OK" << endl;
         float pi2;
@@ -52,13 +56,14 @@ int main()
         else  cout << newstr << " OK" << endl;
         inp_file.close();
     }
-    else cerr << "**Could not open file!!" << endl;  //how do I output the filename also? <<inp_file<<endl; was not good, gives 0 as filename
+    else 
+      cerr << "***Could not open file!" << endl;//how do I output the name of file? <<inp_file was not good, gives 0 as filename
     
     cout << "\nRead from file line-by-line" << endl;
     inp_file.open( fileName.c_str() );
     if(inp_file) 
     {
-        while (not inp_file.eof())       //as long as you have not reached the EndOfFile...
+        while (not inp_file.eof())          //as long as you have not reached the EndOfFile...
         {
             getline(inp_file, newstr);      // 3 pairs of word: number  will be read (whole lines)
             cout << newstr << endl;         //each iteration outputs the whole line (3 iterations until the EOF)
