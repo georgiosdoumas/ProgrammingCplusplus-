@@ -6,6 +6,7 @@
 //"The alternative would be to set a Boolean that is tested in the outer for loop, and then do a break from the inner for loop."
 //but in reality it should say :
 //The alternative would be to set a Boolean that is tested in the inner for loop, and then do a break from the outer for loop.
+//I cannot believe that after 15 years and so many eyes reading the text , it has still remained uncorrected.
 
 #include <iostream>
 using namespace std;
