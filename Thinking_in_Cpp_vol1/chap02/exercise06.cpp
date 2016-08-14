@@ -20,6 +20,7 @@ int main()
 }
 
 /* *******
+contents of file06.txt
 line one
 second line here.
 3rd line is this.
