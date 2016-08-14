@@ -1,7 +1,8 @@
 //: C03:gotoKeyword.cpp
 // The infamous goto is supported in C++
 //but here is another alternative solution.
-//I used the advice mentioned in the book/web-page , but it is not well expressed.
+//I used the advice mentioned in the book, http://www.drbio.cornell.edu/pl47/programming/TICPP-2nd-ed-Vol-one-html/Frames.html
+//but it is not well expressed.
 //It says in the text 
 //"The alternative would be to set a Boolean that is tested in the outer for loop, and then do a break from the inner for loop."
 //but in reality it should say :
