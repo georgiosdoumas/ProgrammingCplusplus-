@@ -1,3 +1,12 @@
+http://www.drbio.cornell.edu/pl47/programming/TICPP-2nd-ed-Vol-one-html/Frames.html
+
+//: C03:gotoKeyword.cpp in paragraph Using and misusing goto
+//The advice mentioned in the book after the example is not well expressed.
+//It says in the text 
+"The alternative would be to set a Boolean that is tested in the outer for loop, and then do a break from the inner for loop."
+//but in reality it should say :
+The alternative would be to set a Boolean that is tested in the inner for loop, and then do a break from the outer for loop.
+//See my implementation in example goto2.cpp under chap03
 
 
 //: C03:Mathops.cpp
