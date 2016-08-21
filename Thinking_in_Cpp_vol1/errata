@@ -1,0 +1,7 @@
+
+
+//: C03:Mathops.cpp
+// A macro to display a string and a value.
+#define PRINT(STR, VAR) cout << STR << " = " << VAR << endl  
+//here the webpage has it wrong as:  
+//#define PRINT(STR, VAR) cout << STR " = " << VAR << endl  
