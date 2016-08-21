@@ -24,3 +24,6 @@ int main()
    PR("right rotate b:",ror(b) );
 }
 // g++ -o RotationMain Rotation.cpp printBinary.cpp RotationMain.cpp
+// where the file printBinary.cpp is exactly as the C03:printBinary.cpp can be found in
+//http://www.drbio.cornell.edu/pl47/programming/TICPP-2nd-ed-Vol-one-html/Frames.html
+// the header file printBinary.h can also be found there
