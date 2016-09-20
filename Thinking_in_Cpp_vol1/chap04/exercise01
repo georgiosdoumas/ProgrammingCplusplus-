@@ -1,0 +1,30 @@
+//exercise01.c
+int main()
+{
+    puts("This was compiled with gcc.\n");
+    return 0;
+}
+//gcc -Wall -pedantic -o exercise01_c exercise01.c
+/*********
+exercise01.c: In function ‘main’:
+exercise01.c:3:5: warning: implicit declaration of function ‘puts’ [-Wimplicit-function-declaration]
+     puts("This was compiled with gcc.\n");
+     ^
+./exercise01 
+This was compiled with gcc.
+*******/ 
+
+
+//exercise01.cpp
+int main()
+{
+    puts("This was compiled with gcc.\n");
+    return 0;
+}
+//g++ -Wall -pedantic -o exercise01_cpp exercise01.cpp   
+/*********
+exercise01.c: In function ‘int main()’:
+exercise01.c:3:41: error: ‘puts’ was not declared in this scope
+     puts("This was compiled with gcc.\n");
+                                         ^
+********/ //no executable was produced. g++ is more strict than gcc
