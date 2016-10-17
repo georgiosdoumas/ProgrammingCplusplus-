@@ -14,3 +14,9 @@ The alternative would be to set a Boolean that is tested in the inner for loop, 
 #define PRINT(STR, VAR) cout << STR << " = " << VAR << endl  
 //here the webpage has it wrong as:  
 //#define PRINT(STR, VAR) cout << STR " = " << VAR << endl  
+
+
+// Chapter 6 Aggregate Initialization :
+int c[] = { 1, 2, 3, 4 };
+Now if you decide to add another element to the array, you simply add another initializer.
+//I do not think that the above sentence is valid. The array is fixed to have 4 elements and cannot be expanded.
