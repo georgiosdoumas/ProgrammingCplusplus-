@@ -1,6 +1,6 @@
 //: C06:Handle.cpp {O}
 // Handle implementation for exercise 6
-#include "Handle.h"
+#include "exercise06.h"
 #include "../require.h"
 #include <iostream>
 // Define Handle's implementation:
