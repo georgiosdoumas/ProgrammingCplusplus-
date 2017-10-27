@@ -14,6 +14,7 @@ int main()
     std::cin>>n1>>n2>>n3 ;
     charactermultiplier(n1, l);  //calling the function and passing a simple char instead of wchar_t is of course not a problem
     std::cout<< addNumbers(n2,n3) <<std::endl;
+    charactermultiplier(4,'k');
     return 0;
 }
 // g++ -Wall -std=c++11 -o page22main page22simplefunction.cpp page22main.cpp
