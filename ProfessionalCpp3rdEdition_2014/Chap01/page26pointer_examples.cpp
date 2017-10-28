@@ -9,7 +9,7 @@ int main()
     // The following line compiles (with warning about uninitialized variable) 
     cout << non_initialized_p << " memory location is on the heap, with contents : " << cout << *non_initialized_p << endl;
     // but I noticed that the next line, I get slightly different result! I did not expect that
-    cout << non_initialized_p << " memory location is on the heap, with contents : "; cout << *non_initialized_p << endl;
+    cout << non_initialized_p << " memory location is on the heap, with contents : " << *non_initialized_p << endl;
     //after compiling, I run the program several times in a row, and noticed that the addresses allocated are always the same
     //something that does not happen in the next programs
     return 0;
@@ -40,7 +40,7 @@ int main()  // trying with doubles
 {
     double* pointer2double = new double ;  // we can skip the nullptr initialization,and do in 1 step what the previews program did in 2 steps
     *pointer2double = 37.6 ; 
-    cout << pointer2double << " memory location is on the heap, with contents: " ; cout << *pointer2double << endl;
+    cout << pointer2double << " memory location is on the heap, with contents: " << *pointer2double << endl;
     delete pointer2double ;
     cout << pointer2double << " memory location is (after delete) still on the heap, with contents: " << *pointer2double << endl;
     pointer2double = nullptr; 
@@ -53,11 +53,11 @@ int main()
 {
     double* pointer2double = new double ;  
     *pointer2double = 37.6 ; 
-    cout << pointer2double << " memory location is on the heap, with contents: " ; cout << *pointer2double << endl;
+    cout << pointer2double << " memory location is on the heap, with contents: " << *pointer2double << endl;
     delete pointer2double ; // so what did the delete does? 
     cout << " we did a delete, and now we wil reassign " << endl;
     *pointer2double = 42.3;  // the pointer is still alive! 
-    cout << pointer2double << " memory location is still on the heap, with contents: " ; cout << *pointer2double << endl;
+    cout << pointer2double << " memory location is still on the heap, with contents: " << *pointer2double << endl;
     //double* pointer2double = new double; // compiler error, complains about previoulsy declared 
     //pointer2double = new double;   //
     pointer2double = nullptr; 
@@ -77,7 +77,7 @@ int main()
     cout << pointer2double << " memory location is on the heap, with contents(after assigning): " << *pointer2double << endl;
     //Now we will do an assignement of a memory address from the stack to the pointer2double (initially created on the heap) 
     pointer2double = &double_on_the_stack ;         // it works, I was slightly surprised! 
-    cout << pointer2double << " memory location is(?) on the heap, with contents: " ; cout << *pointer2double << endl;
+    cout << pointer2double << " memory location is(?) on the heap(No!), with contents: " << *pointer2double << endl;
     //delete pointer2double ; // now there is no point to delete , and actually gives an execution error-  munmap_chunk(): invalid pointer
     return 0;
 }
