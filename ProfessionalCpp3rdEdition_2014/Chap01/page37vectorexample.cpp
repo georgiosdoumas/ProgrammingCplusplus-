@@ -5,6 +5,7 @@
 //using namespace std;  //Just wanted to explicitly write the names , to ensure that I realize what names belong in the std
 // http://www.cplusplus.com/reference/vector/vector/cbegin/
 //http://en.cppreference.com/w/cpp/container/vector/end
+//http://en.cppreference.com/w/cpp/iterator/begin
 int main()
 {
     // Create a vector of strings, using uniform initialization
@@ -16,9 +17,10 @@ int main()
     for (const auto& str : myVector)        // Print the elements using a range-based for loop
       std::cout << str << std::endl;
       // Iterate over the elements in the vector and print them once more
-    //for (auto iter = std::vector::cbegin(myVector); iter != std::vector::cend(myVector); ++iter) //I cannot test it on my g++ 4.8.2 ! 
+    //for (auto iter = std::vector::cbegin(myVector); iter != std::vector::cend(myVector); ++iter) //Cannot test on my g++ 4.8.2 ! 
+    //for (auto iter = std::cbegin(myVector); iter != std::cend(myVector); ++iter) // Don't know if this or the above is correct syntax !  
     for (auto iter = myVector.cbegin(); iter != myVector.cend(); ++iter)  //that is the syntax that works for me
       std::cout << *iter << std::endl;
     return 0;
 }
-// g++ -Wall -std=c++11 -o page37vectorexample page37vectorexample.cpp
+// g++ -Wall -std=c++1y -o page37vectorexample page37vectorexample.cpp
