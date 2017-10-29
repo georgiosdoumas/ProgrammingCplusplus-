@@ -4,8 +4,8 @@
 using std::cout;
 namespace mycode_ns
 {
-	void foo() 
-	{
-		cout << __func__ << " called in the mycode_ns namespace" << std::endl; //the __func__ is presented at page 22-23
-	}
+    void foo() 
+    {
+	 cout << __func__ << " called in the mycode_ns namespace" << std::endl; //the __func__ is presented at page 22-23
+    }
 }
