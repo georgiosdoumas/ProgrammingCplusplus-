@@ -1,4 +1,4 @@
-// Professional C++ 3rd Ed , Chap 01 page 33 , check to see what my compiler (g++ 4.8.2) can do 
+// Professional C++ 3rd Ed, Chap 01 page 33, check to see what my compiler (g++ 4.8.2, and 4.8.5-16 on a Virtual machine) can do 
 #include <iostream>
 using namespace std;
 
@@ -18,6 +18,7 @@ int main()
     cout << f2 << endl;
     //f2 = "Do not try to change me!";
     //decltype(auto) f3 = foo(); // even with -std=c++1y, I get error: expected primary-expression before ‘decltype’
+    // I suppose I have to try gcc 4.9 and later.
     return 0;
 }
 // g++ -Wall -std=c++11 -o page33decltype page33decltype.cpp
