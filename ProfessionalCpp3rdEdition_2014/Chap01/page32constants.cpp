@@ -19,4 +19,4 @@ int main()
     // mysteryFunction( &productName ) ;   //as expected, it does not compile. Protection of the const productName!
     return 0;
 }
-// g++ -o page32constants page32constants.cpp
+// g++ -Wall -std=c++11 -o page32constants page32constants.cpp
