@@ -4,6 +4,6 @@
 #include <iostream> 
 namespace mycode_ns 
 {
-	void foo();		//function declaration. For implementetion look at source file page07_8namespaces_functions.cpp
+    void foo();  //function declaration. For implementetion look at source file page07_8namespaces_functions.cpp
 }
 #endif
