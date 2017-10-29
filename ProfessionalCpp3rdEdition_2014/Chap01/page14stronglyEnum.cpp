@@ -4,7 +4,7 @@ using namespace std;
 int main()
 {
     enum class MyEnum { EnumValue1, EnumValue2 = 10, EnumValue3 };
-    enum class charEnum: char { enumchar_d = 'd' , enumchar_f = 'f' }; //I wanted to see if it also compiles, and it does!
+    enum class charEnum: char { enumchar_d = 'd' , enumchar_f = 'f' }; //Wanted to try it. I suppose :double { } is not allowed
     MyEnum variable1 = MyEnum::EnumValue3;
     //cout << variable1 << endl;   //compiler error
     charEnum leter1 = charEnum::enumchar_f ;
