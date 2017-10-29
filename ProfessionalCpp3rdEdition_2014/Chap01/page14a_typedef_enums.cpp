@@ -2,7 +2,7 @@
 #include <iostream>
 int main()
 {
-    enum PieceType { PieceTypeKing, PieceTypeQueen, PieceTypeRook, PieceTypePawn }; //no need for: typedef enum PieceType , as in C
+    enum PieceType { PieceTypeKing, PieceTypeQueen, PieceTypeRook, PieceTypePawn }; //no need for: typedef enum PieceType, as in C
     PieceType somePiece;
     //somePiece = 0; 	//compiler error, so we have to use the next line
     somePiece = PieceTypeKing; //only this is acceptable now!
