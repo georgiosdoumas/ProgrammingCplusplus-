@@ -28,7 +28,7 @@ namespace Records
         void setEmployeeNumber(int employeeNumber);
         int getEmployeeNumber() const { return mEmployeeNumber; } //since it was so simple,I implemented it inside class
         void setSalary(int newSalary);
-        int getSalary() const {return mSalary; }     //again I differntiate form the book, and implelent it inside class
+        int getSalary() const {return mSalary; }     //again I differntiate form the book, and implement it inside class
         bool getIsHired() const { return mHired; }   //another inclass implementation,since the function is too simple
     };
 } // end of namespace 
