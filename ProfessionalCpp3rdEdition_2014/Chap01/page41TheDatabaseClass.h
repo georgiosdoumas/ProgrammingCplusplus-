@@ -1,4 +1,5 @@
 // Professional C++ 3rd Ed, Chap 01 page 41 header file for class Database
+// Functions will be defined on page42Database.cpp
 // NOTE: where the book says mNextEmployeeNumber , I decided to say mNewHireEmployeeNumber
 #pragma once   // instead of using #ifndef and similar ...
 #include <iostream>
