@@ -6,7 +6,8 @@
 using namespace std;
 namespace Records 
 {
-  Database::Database() : mNewHireEmployeeNumber(kFirstEmployeeNumber) { }
+  Database::Database() : mNewHireEmployeeNumber(kFirstEmployeeNumber) 
+   { }   //Constructor that initializes by default the employee number with the value of kFirstEmployeeNumber
   
   Employee& Database::addEmployee(const string& firstName, const string& lastName)
   {
@@ -38,7 +39,7 @@ namespace Records
         if (employee.getFirstName() == firstName && employee.getLastName() == lastName)
          { return employee; }
     }  
-    throw runtime_error("No employee found with name: "+firstName+" "+lastName );  //my improvement,after reading Chap02 
+    throw runtime_error("No employee found with name: " + firstName + " " + lastName );  
   }
   
   void Database::displayAll() const
@@ -64,4 +65,5 @@ namespace Records
          employee.display();
     }
   }
+ 
 }
