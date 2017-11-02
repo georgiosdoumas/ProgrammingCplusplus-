@@ -1,4 +1,5 @@
 // Professional C++ 3rd Ed, Chap 01 page 39 , implementing the class functions
+// with completing what the book does not mention, and using my own variable-names st some points
 #include <iostream>
 #include "page38Employee.h"
 using namespace std;
@@ -13,9 +14,9 @@ namespace Records
     void Employee::demote(int demeritAmount)
       { setSalary(getSalary() - demeritAmount); }
       
-    void Employee::display() const  //I changed the books implementation to not take many lines of output
+    void Employee::display() const  //I changed the books implementation to not spend many lines of output
     {
-        cout << "Employee: " << getLastName() << ", " << getFirstName() << endl;
+        cout << "\tEmployee: " << getLastName() << ", " << getFirstName() << endl;
         cout << "-------------------------" << endl;
         cout << (mHired ? "Current Employee |" : "Former Employee |") ;
         cout << " Employee Number: " << getEmployeeNumber() ;
@@ -28,10 +29,10 @@ namespace Records
     const string& Employee::getFirstName() const
     { return mFirstName; }
     
-    void Employee::setLastName(const string& lastName)  //the book omitts this, for brevity of space
+    void Employee::setLastName(const string& lastName)  //the book omitts this, because it is so simple
     { mLastName = lastName; }
 
-    const string& Employee::getLastName() const     //the book omitts this, for brevity of space
+    const string& Employee::getLastName() const     //the book omitts this also, so here is my simple implementation
     { return mLastName; }
     
     void Employee::setEmployeeNumber(int newEmployeeNumber)  //different name for the passed parameter form what the book has
