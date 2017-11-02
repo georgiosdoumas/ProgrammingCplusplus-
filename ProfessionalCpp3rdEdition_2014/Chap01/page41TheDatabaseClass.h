@@ -7,7 +7,7 @@
 #include "page38Employee.h"
 namespace Records 
 {
-  const int kFirstEmployeeNumber = 1000;  //each new hired employee  increases it. Fired ones will NOT decrease it!
+  const int kFirstEmployeeNumber = 1000;  //the first hired employee gets this number. 
   class Database
   {
     public:
@@ -20,6 +20,6 @@ namespace Records
       void displayFormer() const;
     private:
       std::vector<Employee> mEmployees;
-      int mNewHireEmployeeNumber;   //tracks the number of last hired
+      int mNewHireEmployeeNumber;   //tracks the number of each new hire. Does NOT decrese by each fire! 
   };
 }
