@@ -27,8 +27,8 @@ namespace Records
          { return employee; }
     }
     // No return has happened in the for-loop? No matching employee was found. Throw exception :
-    throw runtime_error("No employee found with ID: "); 
-    cout << employeeNumber ;        //my addition , does not exist in the book
+    string errmsg = "No employee found with ID: "+ to_string(employeeNumber) ; //my addition for a more complete message
+    throw runtime_error(errmsg);    // I learned about function to_string on Chapter 2 , and returned here to use it! 
   }
   // My implementetion for the other method of getting 
   Employee& Database::getEmployee(const std::string& firstName, const std::string& lastName)
@@ -38,8 +38,7 @@ namespace Records
         if (employee.getFirstName() == firstName && employee.getLastName() == lastName)
          { return employee; }
     }  
-    throw runtime_error("No employee found with name: "); 
-    cout << firstName + " " + lastName ;  //my addition , does not exist in the book
+    throw runtime_error("No employee found with name: "+firstName+" "+lastName );  //my improvement,after reading Chap02 
   }
   
   void Database::displayAll() const
