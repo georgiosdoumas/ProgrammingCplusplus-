@@ -17,8 +17,8 @@ namespace Records
         Employee();    // QUESTION: the compiler will provide a default destructor ?! 
         void promote(int raiseAmount = 1000);  //default parameter, in case the function is called without specific value
         void demote(int demeritAmount = 1000); //default parameter, in case the function is called without specific value
-        void hire() { mHired = true;}       // Hires or rehires the employee, implementing inside the class (the book skips it)
-        void fire() { mHired = false; }     // Dismisses the employee
+        void hire() { mHired = true;}        // Hires or rehires the employee, implementing inside the class (the book skips it)
+        void fire() { mHired = false; }       // Dismisses the employee
         void display() const;             // Outputs all employee info to console
         // Getters and setters
         void setFirstName(const std::string& firstName);
@@ -28,7 +28,7 @@ namespace Records
         void setEmployeeNumber(int employeeNumber);
         int getEmployeeNumber() const { return mEmployeeNumber; } //since it was so simple,I implemented it inside class
         void setSalary(int newSalary);
-        int getSalary() const {return mSalary; }     //again I differntiate form the book, and implement it inside class
+        int getSalary() const {return mSalary; }     //again I differentiate form the book, and implement it inside class
         bool getIsHired() const { return mHired; }   //another inclass implementation,since the function is too simple
     };
 } // end of namespace 
