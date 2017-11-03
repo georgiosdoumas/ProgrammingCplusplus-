@@ -1,3 +1,7 @@
+/* Exercise 1.2: Change the program to return -1. A return value of -1 is often treated
+as an indicator that the program failed. Recompile and rerun your program to see how
+your system treats a failure indicator from main.*/
+
 //No include statements yet for this simple program
 //I played around putting various negative values on the return statement
 int main()
@@ -5,12 +9,12 @@ int main()
     return -1;
 }
 
-//so because I wanted to change the line of retunr to various values , like 
+// I wanted to change the line of return to various values , like 
 // return -2
 // return -3 
 // and then examine the value that the linux system has for the last executed program , with
 // echo $? 
-// I created a small bash script to build,run and examine the $? , after each change I did on the value of return
+// so I created a small bash script to build,run and examine the $? , after each change I did on the value of return
 
 #!/bin/bash
 # build , run and examine the value of echo $?
