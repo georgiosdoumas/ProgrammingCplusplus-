@@ -10,6 +10,7 @@ int main()
     /*
      * according to what is presented in the book so far , we do not know how to organize the values of v1 and v2
      * so that v1<v2 , because the relational operators have not been shown , nor has the if statement 
+     * see exercise1.19 for how to address it where the if() will be used
     */
     int index = v2;
     while (index >= v1) 
