@@ -1,3 +1,6 @@
+/* Exercise 1.4: Our program used the addition operator, +, to add two numbers. Write
+a program that uses the multiplication operator, * , to print the product instead. */
+
 #include <iostream>
 //This serves as one way to also fix Exercise1.6 , the other way would be to add 2 more std::cout 
 int main()
