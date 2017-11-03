@@ -16,7 +16,7 @@ int main()
             else                        //... or new ISBN 
             {    
                 std::cout << "We have " << cnt << " transactions for " << current_item.isbn() << std::endl;
-                current_item=running_item; 
+                current_item=running_item;  //preparing for the next transactions to read
                 cnt=1;
             }
         }  //after reading last line , do not forget to output the final bunch (1 or more transactions) of ISBN
