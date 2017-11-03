@@ -1,3 +1,5 @@
+/* Exercise 1.11: Write a program that prompts the user for two integers. Print each
+number in the range specified by those two integers. */
 #include <iostream>
 //This incorporates tasks from exercises 1.9 and 1.10 
 int main()
@@ -21,3 +23,5 @@ int main()
               << std::endl;
     return 0;
 }
+// g++ -Wall -std=c++11 -o Exercise1.11 Exercise1.11.cpp
+// ./Exercise1.11
