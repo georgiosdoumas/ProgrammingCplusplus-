@@ -25,3 +25,6 @@ int main()
     else std::cout << "No data to process" << std::endl;  // in case of an empty file
     return 0;
 }
+
+// g++ -Wall -std=c++11 -o Exercise1.23 Exercise1.23.cpp 
+// ./Exercise1.23 < book_sales.dat 
