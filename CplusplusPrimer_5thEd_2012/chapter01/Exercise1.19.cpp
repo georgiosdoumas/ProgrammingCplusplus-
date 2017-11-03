@@ -1,3 +1,6 @@
+/* Exercise 1.19: Revise the program you wrote for the exercise1.11 in § 1.4.1 (p. 13) that
+printed a range of numbers so that it handles input in which the first number is smaller
+than the second. */
 #include <iostream>
 //This incorporates tasks from exercises 1.9 and 1.10 
 int main()
