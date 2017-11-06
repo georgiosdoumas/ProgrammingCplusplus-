@@ -1,4 +1,4 @@
-// Professional C++ 3rd Ed , Chap 01 page 14
+// Professional C++ 3rd Ed , Chap 01 page 14 simple enumerators, similar to C
 #include <iostream>
 int main()
 {
@@ -7,7 +7,7 @@ int main()
 	//somePiece = 1; 	//compiler error, so we have to use the next line
 	somePiece = PieceTypeKing; //only this is acceptable now!
 	PieceType anotherPiece = PieceTypePawn; //it has value 11 , next value of PieceTypeRook 
-	std::cout << somePiece << std::endl;  //this also compiles! 
+	std::cout << somePiece << std::endl;  //this  compiles! But compare with next exercise page14stronglyEnum.cpp
 	std::cout << PieceTypeQueen << std::endl;
 	//We can also use more strictly these casts, presented in chapter 10, 
 	//but in other books like C++ Primer (or Beginning C++) they appear in early chapters
