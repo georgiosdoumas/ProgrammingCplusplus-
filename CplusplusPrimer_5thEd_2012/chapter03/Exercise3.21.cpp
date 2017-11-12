@@ -6,6 +6,8 @@ using std::cin; using std::cout; using std::endl; using std::string;
 using std::vector; 
 int main() 
 {
+// since we will use the iterators only for reading elements and not modify them, I prefer to use vector<int>::const_iterator
+// so I use vectorname.cbegin() and vectorname.cend() instead of .begin() and .end()
     vector<int> v1;
     if(!v1.empty() ) {
         for ( auto intiter = v1.cbegin() ; intiter != v1.cend() ; ++intiter  ) cout << *intiter << " ";
