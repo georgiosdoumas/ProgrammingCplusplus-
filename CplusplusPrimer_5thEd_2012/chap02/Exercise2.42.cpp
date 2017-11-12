@@ -35,3 +35,17 @@ int main()
 }
 // g++ -Wall -std=c++11 -o Exercise2.42 Exercise2.42.cpp 
 // ./Exercise2.42 < book_data_sales
+
+/* Sample contents of text file book_data_sales
+
+0-201-70353-X TitleBook 4 24.99
+0-201-82470-1 AnotherBook 4 45.39
+0-201-88954-4 AnotherTitle 2 15.00 
+0-201-88954-4 AnotherTitle 5 12.00 
+0-201-88954-4 AnotherTitle 7 12.00 
+0-201-88954-4 AnotherTitle 2 12.00 
+0-399-82477-1 NewBook 2 45.39
+0-399-82477-1 NewBook 3 45.39
+0-201-78345-X NiceBook 3 20.00
+0-201-78345-X NiceBook 2 25.00
+*/
