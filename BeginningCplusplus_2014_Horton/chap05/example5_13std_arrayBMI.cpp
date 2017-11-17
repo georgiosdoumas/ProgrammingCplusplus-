@@ -33,7 +33,7 @@ int main()
     for (auto w : weight_lbs) cout << setw(5) << w << " |";
     cout << endl;
     // Output line below headings, for wt_count columns (plus 1, for the leftmost col that will output the inches)
-    for (size_t i{1} ; i <= wt_count+1 ; ++i) cout << "-------";
+    for (size_t i{1} ; i <= wt_count+1 ; ++i) cout << " ----- ";
     cout << endl;
     double bmi {};              // Stores BMI
     unsigned int feet {};       // Whole feet for output
@@ -52,7 +52,7 @@ int main()
         cout << endl;
     }
     // Output line below table
-    for (size_t i {1} ; i <= wt_count+1 ; ++i)  cout << "-------";
+    for (size_t i {1} ; i <= wt_count+1 ; ++i)  cout << " ----- ";
     cout << "\nBMI from 18.5 to 24.9 is normal" << endl;
 }
 // g++ -Wall -std=c++11 -o example5_13std_arrayBMI example5_13std_arrayBMI.cpp
