@@ -1,4 +1,7 @@
-// Exercise 5.2 Summing integers and calculating the average
+// Beginning C++ 2014 , Chapter 05 
+/* Exercise 5-2. Write a program that uses a while loop to accumulate the sum of an arbitrary
+number of integers that are entered by the user. The program should output the total of all the
+values and the overall average as a floating-point value. */
 #include <iostream>
 #include <iomanip>
 
