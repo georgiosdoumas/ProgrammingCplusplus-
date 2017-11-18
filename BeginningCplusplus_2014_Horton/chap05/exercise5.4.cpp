@@ -33,7 +33,7 @@ int main()
             cout << std::setw(4) << element << " " ;
             ++line_element;
           }
-        if ( !(line_element % 8) ) cout << endl;
+        if ( !(line_element % elements_per_line) ) cout << endl;
     }
     cout << endl;
 }
