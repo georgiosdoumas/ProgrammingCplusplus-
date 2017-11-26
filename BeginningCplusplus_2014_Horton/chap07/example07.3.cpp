@@ -39,7 +39,7 @@ int main()
     std::cout <<"In ascending sequence the names you entered are:\n";
     size_t field_width = max_length + 2;  // have enough space for even the longest name
     size_t count {};
-    for(auto& name : names)
+    for(const auto& name : names)
     {
         std::cout << std::setw(field_width) << name;
         if(!(++count % 5)) std::cout << std::endl;
