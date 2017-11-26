@@ -33,7 +33,7 @@ int main()
         }
     }
     size_t max_length{};                // Find the length of the longest name, for presentation purposes
-    for(auto& name : names)
+    for(const auto& name : names)
       if(max_length < name.length()) max_length = name.length();
     // Output the sorted names 5 to a line
     std::cout <<"In ascending sequence the names you entered are:\n";
