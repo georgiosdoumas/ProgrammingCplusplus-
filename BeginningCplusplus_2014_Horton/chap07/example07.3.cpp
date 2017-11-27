@@ -23,7 +23,8 @@ int main()
         sorted = true;          // we will run through the array, and if we do not swap any names, this will remain true
         for(size_t i {} ; i < names.size()-1 ; ++i)
         {
-            if(names[i] > names[i+1])
+            //if( names[i] > names[i+1] )    // but we can also use the compare function :
+            if( names[i].compare(names[i+1]) > 0 )
             { // Out of order - so swap names
                 temp = names[i+1];
                 names[i+1] = names[i];
