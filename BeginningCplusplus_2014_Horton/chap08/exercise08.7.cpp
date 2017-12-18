@@ -1,4 +1,5 @@
 // Beginning C++ 2014. The book solutions use dynamicaly allocated arrays, with new[].
+// https://github.com/Apress/beg-cpp/blob/master/9781484200087_Exercise_Solutions/Chapter%208/Soln8_07.cpp
 // A simple and effective approach. But I was curious to see how I could implement it with vectors.
 // I could not find in the book a way to have 2D vectors, so I used Example6_06.cpp of page 176-177 as a guide.
 // Good way to refresh shared_ptr after many weeks! 
