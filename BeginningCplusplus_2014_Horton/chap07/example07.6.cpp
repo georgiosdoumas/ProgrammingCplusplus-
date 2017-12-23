@@ -28,11 +28,14 @@ int main()
         return 1;
     }
     size_t start {text.find(word)};     // Index of 1st occurrence of word
+    size_t firstoc {start};            //save it to use it for erasing later
     while (start != string::npos)           // Find and replace all occurrences
     {
         text.replace(start, word.length(), replacement);        // Replace word
         start = text.find(word, start + replacement.length());
     }
     std::cout << "\nThe string you entered is now:\n" << text << std::endl;
+    text.erase(firstoc, replacement.length() );
+    std::cout << "\nThe string without the substituted word is :\n" << text << std::endl;
 }
 // /usr/bin/g++ -Wall -std=c++11 -o example07.6 example07.6.cpp
