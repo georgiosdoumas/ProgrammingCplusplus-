@@ -1,6 +1,7 @@
 // Beginning C++ 2014 , my solution without destroying the initial words, but using an extra vector
 // examples of anagrans : listen-silent , 
 // https://wordsmith.org/anagram/index.html
+// https://github.com/Apress/beg-cpp/blob/master/9781484200087_Exercise_Solutions/Chapter%207/Soln7_04.cpp
 #include <iostream>
 #include <string>
 #include <vector>
