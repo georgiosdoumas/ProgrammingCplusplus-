@@ -17,7 +17,7 @@ struct Person {
     string getsname() const { return surname ; }
     string getAddress() const { return address; }
 };
-
+// see Exercise19.cpp for a prefered implementation of the functions, without directly accessimg data-members
 istream& read(istream& personis , Person& somebody)
 {
     personis >> somebody.firstname >> somebody.surname >> somebody.address ;
