@@ -11,7 +11,8 @@ struct Person {
     Person(const string & nm, const string & snm, const string & addr ) : firstname(nm), surname(snm), address(addr) { } ;
      string firstname ;
      string surname ;
-     string address;
+     string address ;
+  //The following geter functions are still not used. After 7.2 Access Control and Encapsulation, all will become correct
     string getfname() const { return firstname ; }
     string getsname() const { return surname ; }
     string getAddress() const { return address; }
