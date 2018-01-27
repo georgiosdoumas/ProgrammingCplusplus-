@@ -75,7 +75,7 @@ int main()
      else std::cerr << "No data?!" << endl;     // Reading failed? there was no input. Notify the user
 	return 0;
 }
-// g++ -Wall -std=c++11 -o Exercise7.12 Exercise7.12.cpp 
+// g++ -Wall -std=c++11 -o Exercise7.12_13 Exercise7.13.cpp 
 /*
 The input file here is not similar to what I have for my implementations (where I have a string for Title)
 but a simpler file like this , with no title :
@@ -88,5 +88,5 @@ books_CppPrimerStyle.dat
 987654321-C  1 54.3
 123498765-R  2 42.0
 123498765-R  1 45.0
-./Exercise7.12 < books_CppPrimerStyle.dat
+./Exercise7.12_13 < books_CppPrimerStyle.dat
 */
