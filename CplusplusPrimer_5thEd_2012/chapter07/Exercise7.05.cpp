@@ -25,4 +25,4 @@ int main()
     cout << "Reading the book of " << teacher.getName() << " titled C++ Primer." << endl; 
 	return 0;
 }
-// g++ -Wall -std=c++11 -o Exercise7.5 Exercise7.5.cpp 
+// g++ -Wall -std=c++11 -o Exercise7.05 Exercise7.05.cpp 
