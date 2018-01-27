@@ -41,10 +41,10 @@ int main()
     }
 	return 0;
 }
-// g++ -Wall -std=c++11 -o Exercise7.9 Exercise7.9.cpp 
+// g++ -Wall -std=c++11 -o Exercise7.09 Exercise7.09.cpp 
 /* 
 persons.dat
 Stanley Lippman Somewhere-54
 Ivor Horton Elsewhere-62
-./Exercise7.9 < persons.dat
+./Exercise7.09 < persons.dat
 */
