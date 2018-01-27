@@ -10,7 +10,7 @@ Recompile those programs with your new class definition to verify that they stil
 // I really do not know at this point which is considered best practice !!! But the program compiles and runs.
 #include <iostream>
 #include <string> 
-#include "Exercise21class.h"
+#include "Exercise7.21class.h"
 
 Sales_data& Sales_data::combine(const Sales_data &rhs)
 {
@@ -43,5 +43,5 @@ Sales_data add(const Sales_data &lhs, const Sales_data &rhs)
     return sum;
 }
  
-// g++ -Wall -std=c++11 -o Exercise7.21 Exercise21functions.cpp Exercise21main.cpp 
+// g++ -Wall -std=c++11 -o Exercise7.21 Exercise7.21functions.cpp Exercise7.21main.cpp 
 
