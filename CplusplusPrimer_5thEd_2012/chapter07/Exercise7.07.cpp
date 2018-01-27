@@ -58,7 +58,7 @@ int main()
      else std::cerr << "No data?!" << endl;        // Reading failed? there was no input. Notify the user
 	return 0;
 }
-// g++ -Wall -std=c++11 -o Exercise7.7 Exercise7.7.cpp 
+// g++ -Wall -std=c++11 -o Exercise7.07 Exercise7.07.cpp 
 /* Now the input file is different. It has the price per book
 books_unitprice.dat 
 123456789-B TheCppProgrammingLanguage 2 51.8 
@@ -70,4 +70,4 @@ books_unitprice.dat
 123498765-R BeginningCpp 2 42.0
 123498765-R BeginningCpp 1 45.0
 */
-// ./Exercise7.7 < books_unitprice.dat
+// ./Exercise7.07 < books_unitprice.dat
