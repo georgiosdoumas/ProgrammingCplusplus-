@@ -45,7 +45,7 @@ int main()
      }
 	return 0;
 }
-// g++ -Wall -std=c++11 -o Exercise7.1 Exercise7.1.cpp 
+// g++ -Wall -std=c++11 -o Exercise7.01 Exercise7.01.cpp 
 /*  Sample data file contents (unfortunately due to the function of cin , the title must be a single word! )
 books.dat
 123456789-B TheCppProgrammingLanguage 2 105.8
