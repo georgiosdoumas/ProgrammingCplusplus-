@@ -13,7 +13,7 @@ Recompile those programs with your new class definition to verify that they stil
 // file with the main() program. 
 #include <iostream>
 #include <string> 
-#include "Exercise21class.h"
+#include "Exercise7.21class.h"
 
 int main() 
 {
@@ -35,7 +35,7 @@ int main()
      else std::cerr << "No data?!" << endl;     // Reading failed? there was no input. Notify the user
 	return 0;
 }
-// g++ -Wall -std=c++11 -o Exercise7.21 Exercise21functions.cpp Exercise21main.cpp 
+// g++ -Wall -std=c++11 -o Exercise7.21 Exercise7.21functions.cpp Exercise7.21main.cpp 
 /*
 The input file here is not similar to what I have for my implementations (where I have an extra string for Title)
 but a simpler file like this , with no title :
