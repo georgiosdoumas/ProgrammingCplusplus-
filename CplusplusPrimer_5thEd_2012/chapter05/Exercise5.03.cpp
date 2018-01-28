@@ -12,4 +12,4 @@ int main()
     std::cout << "Sum of 1 to 10 inclusive is " << sum << std::endl;
 	return 0;
 }
-// g++ -Wall -std=c++11 -o Exercise5.3 Exercise5.3.cpp 
+// g++ -Wall -std=c++11 -o Exercise5.3 Exercise5.03.cpp 
