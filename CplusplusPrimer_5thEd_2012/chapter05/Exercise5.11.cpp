@@ -1,6 +1,5 @@
 /* Exercise 5.11: Modify our vowel-counting program so that it also counts the number
-of blank spaces, tabs, and newlines read.  sCnt , tCnt , nCnt respectively
-*/
+of blank spaces, tabs, and newlines read.  sCnt , tCnt , nCnt respectively  */
 #include <iostream>
 #include <string> 
 using std::cin; using std::cout; using std::endl; using std::string;
@@ -10,12 +9,12 @@ int main()
     string line ;
     while ( getline( cin, line) ) 
     {
-        if( line.empty() ) ++nCnt;
-        else 
+        if( line.empty() ) ++nCnt; //nothing else to do, we go for the next reading iteration of while-loop
+        else // else there are many things to do! 
         {
-            for (auto ch : line ) 
+            for (auto ch : line )  //run through the non-empty line ...
             {
-            // if ch is a vowel, increment the appropriate counter
+            // if ch is a vowel, or if space or tab, increment the appropriate counter  
               switch (ch) 
               {
                 case 'a': case 'A': ++aCnt; break;
@@ -26,9 +25,9 @@ int main()
                 case ' ':  ++sCnt ; break;
                 case '\t': ++tCnt ; break;
               }
-            } //end of for , we proccessed a whole non-empty line 
-        } //end of else , line was not empty.
-        ++nCnt;         //before we read the next line lets increase the newline counter
+            } //end of for, we processed a whole non-empty line 
+            ++nCnt;  // so as we reached the end of the line do not forget that a new-line is supposed to exist
+        } //end of else, and we have incremented our newline counter, so we are ready to traverse the next line.
     }
     cout << "Number of vowel a: \t" << aCnt << '\n' 
          << "Number of vowel e: \t" << eCnt << '\n' 
@@ -37,7 +36,10 @@ int main()
          << "Number of vowel u: \t" << uCnt << '\n'
          << "Number of spaces : \t" << sCnt << '\n'
          << "Number of tabs   : \t" << tCnt << '\n'
-         << "Number of newlines: \t" << sCnt << endl; //!!! This comes always equal to the number of spaces,and I do not understand why!
+         << "Number of newlines: \t" << nCnt << endl; 
 	return 0;
 }
 // g++ -Wall -std=c++11 -o Exercise5.11 Exercise5.11.cpp 
+/* 
+./Exercise5.11 < textfile
+*/
