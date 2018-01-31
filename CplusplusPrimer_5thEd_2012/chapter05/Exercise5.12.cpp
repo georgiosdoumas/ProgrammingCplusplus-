@@ -36,4 +36,17 @@ int main()
 	return 0;
 }
 // g++ -Wall -std=c++11 -o Exercise5.12 Exercise5.12.cpp 
-// ./Exercise5.12 < text-file
+/* ./Exercise5.12 < text-file
+ Number of ff : 4
+ Number of fl : 2
+ Number of fi : 2
+*/
+/* text-file : 
+simple line fa
+another ff foline
+fi-flff
+nothing here fe
+ending with ff ff
+ending with fifl
+fk
+*/
