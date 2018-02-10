@@ -1,4 +1,5 @@
-// Using a header that defines a namespace 
+// Using a header that defines a namespace, so we effectively substitude example10.01.data.cpp with 
+// a header file example10.01.h
 #include <iostream>
 #include <string>
 #include "example10.01.h"
