@@ -2,7 +2,7 @@
 // Using a namespace
 #include <iostream>
 #include <string>
- 
+ // This example uses the file example10.01.data.cpp 
 namespace data
 {  // declaring some variables that have been defined on another file
 	extern const double pi;		// Variable is defined in file example10.01.h
