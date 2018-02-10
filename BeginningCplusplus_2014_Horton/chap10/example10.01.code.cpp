@@ -4,9 +4,9 @@
 #include <string>
  
 namespace data
-{
-	extern const double pi;		// Variable is defined in another file
-	extern const std::string days[];		// Array is defined in another file
+{  // declaring some variables that have been defined on another file
+	extern const double pi;		// Variable is defined in file example10.01.h
+	extern const std::string days[];	// Array is defined in file example10.01.h
 }
  
 int main()
