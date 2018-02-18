@@ -2,11 +2,12 @@
 //It is identical with file example12.04.main.cpp , only includes the new header
 #include "example12.04v2.message_pas_by_ref.h"
  
-//not good to pass by value. Copy Constructor is invoked at parameter passing, and Destructor at exiting
-//Because a copy constructor has been defined in the class
+//Not good to pass by value. Copy Constructor is invoked at parameter passing, and Destructor at exiting
+//Because a copy constructor has been defined in the class, this function will not give a segmentation fault at execution
+// but still the passing by value is not the best practice
 void print_byval(Message message) { message.show(); }  
  
-void print_byref(Message &message)  //better to pass by ref
+void print_byref(Message &message)  //Better to pass by ref
 { message.show(); }
 
 int main()
