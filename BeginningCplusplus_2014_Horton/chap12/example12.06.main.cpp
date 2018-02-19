@@ -39,5 +39,22 @@ int main()
   std::cout << "\nThe box that the sum of these boxes is ";
   (boxes[first] + boxes[second]).listBox();
   std::cout << "\nThe volume of the sum is " << maxVolume << std::endl;
+// now for the minimums, we will use the ovrloaded << operator 
+  first = 0; // Index of first Box object of pair
+  second = 1; // Index of second Box object of pair
+  double minVolume {(boxes[first] + boxes[second]).volume()};
+  for (size_t i {}; i < boxCount - 1; ++i)
+    for (size_t j {i + 1}; j < boxCount; j++)
+      if (boxes[i] + boxes[j] < minVolume)
+      {
+        first = i; second = j;
+        minVolume = (boxes[i] + boxes[j]).volume();
+      }
+  std::cout << "The two boxes that sum to the smallest volume are:"
+        << boxes[first] << boxes[second];
+  std::cout << "\nThe volume of the first box is " << boxes[first].volume();
+  std::cout << "\nThe volume of the second box is " << boxes[second].volume();
+  std::cout << "\nThe box that the sum of these boxes is " << boxes[first] + boxes[second];
+  std::cout << "\nThe volume of the sum is" << minVolume << std::endl;
 }
 // /usr/bin/g++ -Wall -std=c++11 -o example12.06exe example12.06.main.cpp

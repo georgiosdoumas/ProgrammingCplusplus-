@@ -36,4 +36,11 @@ inline void Box::listBox()
   std::cout << " Box(" << std::setw(2) << length << ","
   << std::setw(2) << width << "," << std::setw(2) << height << ")";
 }
+// instead of the above function we can overload the output operator:
+std::ostream& operator<<(std::ostream& boxstream, const Box& box)
+{
+  boxstream << " Box(" << std::setw(2) << box.getLength() << ","
+  << std::setw(2) << box.getWidth() << "," << std::setw(2) << box.getHeight() << ")";
+  return boxstream;
+}
 #endif
