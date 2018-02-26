@@ -1,4 +1,4 @@
-// Using a reference parameter to call virtual function
+// Using a reference parameter to call virtual function (implementing also the ideas of page 446)
 #include <iostream>
 #include "example14.06.box.h"                                 // For the  Box class
 #include "example14.06.toughpack.h"                           // For the  ToughPack  class
