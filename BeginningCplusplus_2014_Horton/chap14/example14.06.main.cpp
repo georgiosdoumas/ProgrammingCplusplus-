@@ -1,8 +1,8 @@
-// Using a reference parameter to call virtual function (implementing also the ideas of page 446)
+// Using a reference parameter to call virtual function (and testing the ideas of page 446)
 #include <iostream>
-#include "example14.06.box.h"                                 // For the  Box class
-#include "example14.06.toughpack.h"                           // For the  ToughPack  class
-#include "example14.06.carton.h"                              // For the Carton class
+#include "Box.h"                                 // For the  Box class
+#include "ToughPack.h"                           // For the  ToughPack  class
+#include "Carton.h"                              // For the Carton class
 
 // Global function  to  display  the volume  of  a box
 void  showVolume(const Box& rBox)
@@ -24,8 +24,9 @@ int main()
             << 100*( pBox->Box::volume() - pBox->volume() ) / pBox->Box::volume() << "% of volume." <<std::endl;
   pBox = &carton;
   std::cout << "Comparing a Box to a Carton, we are loosing " 
-            << 100*( pBox->Box::volume() - pBox->volume() ) / pBox->Box::volume() << "% of volume." <<std::endl;
-  				
+            << 100*( pBox->Box::volume() - pBox->volume() ) / pBox->Box::volume() << "% of volume." <<std::endl; 
+  std::cout << "Using the member function difference() of Carton, we get for the difference: " 
+            <<  100 * carton.difference() / pBox->Box::volume()  << "% " << std::endl;				
 }
 
 // /usr/bin/g++ -Wall -std=c++11 -o example14.06 example14.06.cpp
