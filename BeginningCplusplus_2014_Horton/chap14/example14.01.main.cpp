@@ -1,4 +1,5 @@
-example14.01.box.h
+
+//example14.01.box.h
 // Behavior of inherited functions in a derived class
 #include  "example14.01.box.h"                                // For the  Box class
 #include  "example14.01.toughPack.h"                          // For the ToughPack class
@@ -15,3 +16,5 @@ int main()
   Box *pBox {&hardcase};
   std::cout << "hardcase volume through pBox is " << pBox->volume() << std::endl;
 }
+
+// /usr/bin/g++ -Wall -std=c++11 -o example14.01 example14.01.main.cpp
