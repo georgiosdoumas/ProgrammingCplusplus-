@@ -21,5 +21,11 @@ public:
     double vol {(length - 0.5)*(width - 0.5)*(height - 0.5)};
     return vol > 0.0 ? vol : 0.0;
   }
+  // I got the idea for my next function from what is mentioned on page 446 :
+  //     double difference {static_cast<Box>(carton).volume() - carton.volume()};
+  // but I did not wanted to implement it in main as an arithmetic calculation,
+  // I thought it would be nice to make a member function from it, so I quckly thought that *this would be required
+  double difference() const 
+   { return static_cast<Box>(*this).volume() - volume(); };
 };
 #endif
