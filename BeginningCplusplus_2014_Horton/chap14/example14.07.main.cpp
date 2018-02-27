@@ -1,4 +1,5 @@
-// Using an abstract class
+
+// /usr/bin/g++ -Wall -std=c++11 -o // Using an abstract class
 #include <iostream>
 #include <typeinfo>
 #include "example14.07.box.h"                                 // For the  Box class
@@ -19,3 +20,14 @@ int main()
   std::cout << " pBox now is of type:" << typeid(pBox).name() <<std::endl;
   std::cout << "carton volume is " << pBox->volume() << std::endl;
 }
+
+// /usr/bin/g++ -Wall -std=c++11 -o example14.07 example14.07.main.cpp
+/* 
+  ./example14.07
+ hardcase is of type:9ToughPack
+ carton is of type:6Carton
+ pBox now is of type:P3Box
+hardcase volume is 20400
+ pBox now is of type:P3Box
+carton volume is 22722.4
+*/
