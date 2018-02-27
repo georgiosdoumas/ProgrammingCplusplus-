@@ -1,5 +1,4 @@
-
-// /usr/bin/g++ -Wall -std=c++11 -o // Using an abstract class
+// Using an abstract class. Also trying the typeid taht was mentioned on page 451
 #include <iostream>
 #include <typeinfo>
 #include "example14.07.box.h"                                 // For the  Box class
