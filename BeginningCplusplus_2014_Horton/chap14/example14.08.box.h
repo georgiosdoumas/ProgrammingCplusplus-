@@ -1,3 +1,4 @@
+//Excactly as the book has it
 #ifndef BOX_H
 #define BOX_H
 #include "example14.08.vessel.h"
