@@ -14,10 +14,10 @@ int main()
       std::cout << "Its square is " << test*test << std::endl;
       return 0;
     }
-    catch(const char* message)
+    catch(const char* exc_message)
     {
   //Code to handle the exception,executes if exception of type 'char*' or 'const char*' is thrown
-      std::cout << message << std::endl;
+      std::cout << exc_message << std::endl;
       std::cout << " Please enter a valid input.Integer smaller than 5:";
     }
   // if we reach here, then the result of cin>>test was not successful
