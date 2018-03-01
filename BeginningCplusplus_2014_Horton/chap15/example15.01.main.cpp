@@ -1,6 +1,6 @@
 // My variation of the books example, to see if I could dynamicaly build a string for the message
 #include <iostream>
-#include <string>  // also for the functions to_str(...) and  ....c_str()
+#include <string>  // also for the functions to_string(...) and  ....c_str()
 int main()
 {
   for (size_t i {}; i < 8; ++i)
