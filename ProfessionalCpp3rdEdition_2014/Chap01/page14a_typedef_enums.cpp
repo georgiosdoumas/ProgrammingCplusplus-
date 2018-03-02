@@ -9,8 +9,7 @@ int main()
 	PieceType anotherPiece = PieceTypePawn; //it has value 11 , next value of PieceTypeRook 
 	std::cout << somePiece << std::endl;  //this  compiles! But compare with next exercise page14stronglyEnum.cpp
 	std::cout << PieceTypeQueen << std::endl;
-	//We can also use more strictly these casts, presented in chapter 10, 
-	//but in other books like C++ Primer (or Beginning C++) they appear in early chapters
+	//We can also use more strictly the following casts, presented shortly on top of page 13
 	std::cout << static_cast<int> (somePiece) << " is the value of somePiece." << std::endl; 
 	std::cout << static_cast<int> (anotherPiece) << " is the value of anotherPiece." << std::endl;
 	return 0;
