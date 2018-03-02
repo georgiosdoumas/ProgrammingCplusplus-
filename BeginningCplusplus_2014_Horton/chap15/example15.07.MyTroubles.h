@@ -1,4 +1,4 @@
-// A variation of EX15_07 , basically I wanted to apply the ideas presented on top of page 490 
+// A variation of EX15_07 , basically I wanted to apply the ideas presented on top of page 491
 #ifndef MYTROUBLES_H
 #define MYTROUBLES_H
 #include <string>
