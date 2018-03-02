@@ -1,6 +1,6 @@
 // Professional C++ 3rd Ed , Chap 01 page 20
 // Also showing a usefull example of the do { }while (); loop
-//because the book has really ... silly examples that are not meaningfull! What a bad impression to have such simple examples on page 21
+//because the book has really ... silly examples on page 21 that are not meaningfull!
 #include <iostream>
 #include <array>
 using namespace std;
