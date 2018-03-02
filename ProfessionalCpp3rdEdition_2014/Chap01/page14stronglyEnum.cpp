@@ -4,11 +4,11 @@ using namespace std;
 int main()
 {
     enum class MyEnum { EnumValue1, EnumValue2 = 10, EnumValue3 };
-    enum class charEnum: char { enumchar_d = 'd' , enumchar_f = 'f' }; //I wanted to see if it also compiles, and it does!
+    enum class myCharEnum: char { enumchar_d = 'd' , enumchar_f = 'f' }; //A variation of what is done on top of page 15
     MyEnum variable1 = MyEnum::EnumValue3;
     //cout << variable1 << endl;  //Now this simple way does not compile.
     cout << static_cast<int>(variable1) << " is the value for variable1." << endl;   
-    charEnum leter1 = charEnum::enumchar_f ;
+    myCharEnum leter1 = myCharEnum::enumchar_f ;
     cout << static_cast<char>(leter1) << endl;      
     //As we said on page14a_typedef_enums.cpp, static_cast is mentioned on Chapter10. 
     return 0;
