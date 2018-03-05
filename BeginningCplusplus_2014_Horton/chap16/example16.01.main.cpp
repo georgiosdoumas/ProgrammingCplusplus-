@@ -1,6 +1,6 @@
-// Ex16_01.cpp  Using a class template
-#include "Box.h"
-#include "Array.h"
+// Ex16_01.cpp  Using a class template, variation of the book example
+#include "example16.01.box.h"
+#include "example16.01.array.h"
 //#include <iostream>  //included due to Array.h
 #include <iomanip>
 #include <memory>
