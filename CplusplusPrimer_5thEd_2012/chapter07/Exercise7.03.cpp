@@ -36,7 +36,7 @@ int main()
             }
             else {                          //oh , it seems we just started processing a new ISBN
                 cout<<total.bookTitle<<" sold a total of "<<total.units_sold<<" copies, and you earned $ "<<total.price<< endl; 
-                total = trans; //start to process the next book(s) with the new ISBN (No need to do a member-to-member assignement)
+                total = trans; //start to process the next book(s) with the new ISBN (No need to do a member-to-member assignment)
             }
         }
        // when reading stops, do not forget to print the last transaction of last bunch of books with same ISBN
