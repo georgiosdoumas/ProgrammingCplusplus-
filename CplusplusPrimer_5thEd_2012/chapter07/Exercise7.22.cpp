@@ -6,11 +6,11 @@ using std::istream; using std::ostream;
 
 class Person {
     friend istream& read(istream& personis , Person& somebody); //needs to access private data and change them! 
-    private:
+  private:
     string firstname ;
     string surname ;
     string address;
-    public:
+  public:
      Person() = default ;
      Person(const string & nm ) : firstname{nm} { };
      Person(const string & nm, const string & snm ) : firstname(nm), surname(snm) { } ;
