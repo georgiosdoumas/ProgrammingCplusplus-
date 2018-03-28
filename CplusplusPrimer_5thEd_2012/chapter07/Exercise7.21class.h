@@ -19,22 +19,22 @@ istream &read(istream &is, Sales_data &item);
 
 class Sales_data {
     friend std::istream &read(std::istream&, Sales_data&);
-    public:
-    Sales_data() = default;  //declaring 4 constructors , defining all of them inside the class
-    Sales_data(const string &s): bookNo(s) { }
-    Sales_data(const string &s, unsigned n, double p): bookNo(s), units_sold(n), revenue(p*n) { }
-    Sales_data(istream & is) { read(is, *this); }  // This constructor is supposed to be used: salesdataobject(cin);
+   public:
+     Sales_data() = default;  //declaring 4 constructors , defining all of them inside the class
+     Sales_data(const string &s): bookNo(s) { }
+     Sales_data(const string &s, unsigned n, double p): bookNo(s), units_sold(n), revenue(p*n) { }
+     Sales_data(istream & is) { read(is, *this); }  // This constructor is supposed to be used: salesdataobject(cin);
     
-    string isbn() const { return bookNo; }  
-    unsigned  getunitsold() const { return units_sold ; }
-    double getrevenue() const { return revenue ; }    
-    Sales_data& combine(const Sales_data&); 
-    double avg_price() const;    
+     string isbn() const { return bookNo; }  
+     unsigned  getunitsold() const { return units_sold ; }
+     double getrevenue() const { return revenue ; }    
+     Sales_data& combine(const Sales_data&); 
+     double avg_price() const;    
         
-    private: 
-    string bookNo;
-    unsigned units_sold = 0;
-    double revenue = 0.0;
+   private: 
+     string bookNo;
+     unsigned units_sold = 0;
+     double revenue = 0.0;
 };
 ostream &print(ostream &os, const Sales_data &item) ;
 Sales_data add(const Sales_data &lhs, const Sales_data &rhs) ;
