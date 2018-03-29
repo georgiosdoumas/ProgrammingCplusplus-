@@ -16,7 +16,7 @@ istream &read(istream &is, Sales_data &item);
 
 class Sales_data {
     friend std::istream &read(std::istream&, Sales_data&);
-    public:
+  public:
     Sales_data() = default;  //declaring 4 constructors , defining all of them inside the class
     Sales_data(const string &s): bookNo(s) { }
     Sales_data(const string &s, const string& t, unsigned n, double p): bookNo(s), bookTitle(t), units_sold(n), revenue(p*n) { }
@@ -29,7 +29,7 @@ class Sales_data {
     Sales_data& combine(const Sales_data&); 
     inline double avg_price() const;  //write the inline keyword either here (declaration), or on the definition (Exercise7.26functions.cpp) 
         
-    private: 
+  private: 
     string bookNo;
     string bookTitle; 
     unsigned units_sold = 0;
