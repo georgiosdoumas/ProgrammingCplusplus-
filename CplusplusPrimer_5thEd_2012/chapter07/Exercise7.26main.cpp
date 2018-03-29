@@ -1,10 +1,11 @@
-/* Exercise 7.26: Define Sales_data::avg_price as an inline function.
+, only/* Exercise 7.26: Define Sales_data::avg_price as an inline function.
  The programs you’ve written to use Sales_data operations should still continue to work.
 Recompile those programs with your new class definition to verify that they still work. */
 // So what I am doing now is taking the file Exercise7.21main.cpp and modifying it.
 // I am adding my data member for the title of the book, an extra string compared to the books implementation
 // and do the inline that exercise7.26 wants
-// The gain here is that I do not have to change the code in main()
+// The gain here is that I do not have to change the code in main(), only include the new changed header and recompile
+// with the new implementation file Exercise7.26functions.cpp
 
 #include <iostream>
 #include <string> 
