@@ -1,4 +1,4 @@
-/* Exercise 7.23: Write your own version of the Screen class.
+are /* Exercise 7.23: Write your own version of the Screen class.
 Exercise 7.24: Give your Screen class three constructors: a default constructor; 
 a constructor that takes values for height and width and initializes the contents to hold the given number of blanks; 
 and a constructor that takes values for height, width, and a character, to use as the contents of the screen. */
@@ -9,12 +9,12 @@ using std::cin; using std::cout; using std::endl; using std::string;
 class Screen {
     public:
         typedef string::size_type pos;
-        Screen() = default;         // needed, since we defined for Screen also the next constructor
+        Screen() = default;         // needed, since we defining a constructor with parameters
     // On next constructor, the cursor initialized to 0 by its in-class initializer (see value at private member) 
         Screen(pos ht, pos wd, char c): height(ht), width(wd), contents(ht * wd, c) { }
         
         char get() const { return contents[cursor]; }  // get the character at the cursor. Defined in class, so automatically inline
-        inline char get(pos ht, pos wd) const;  // explicitly inline , defined outside of class
+        inline char get(pos ht, pos wd) const;  // explicitly inline function, defined outside of class
         Screen& move(pos r, pos c);             // can be made inline later, see the definition outside of class
     private:
         pos cursor = 0;
@@ -36,8 +36,8 @@ inline Screen& Screen::move(pos r, pos c)  // as we said, we can also specify in
 int main() 
 {
     Screen emptyscreen ; 
-    //Screen linescreen(0,3,'z');  // not logically good (unless we want to declare an empty line). Better have at least dimensions of 1,1
-    Screen linescreen(1,3,'z');     // that is better. We actually have 1 line now , of 3 characters z
+    //Screen linescreen(0,3,'z');  //not logically good (unless we want to declare an empty line). Better have at least dimensions of 1,1
+    Screen linescreen(1,3,'z');     //that is better. We actually have 1 line now , of 3 characters z
     for(int i=0;i<3; ++i) { cout << linescreen.get(0,i) ; cout << "_"; } 
     cout<<endl;
     for(int i=0;i<3; ++i) { linescreen.move(0,i) ; cout<<linescreen.get() ; cout <<","; } //another way to get the line
