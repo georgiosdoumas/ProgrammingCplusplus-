@@ -21,7 +21,7 @@ double Sales_data::avg_price() const   // we declared it as inline inside the cl
      else return 0;
 }
 //Now 3 functions that are class-related, but non-member (they are part of the interface,but not the class implementation) :
-istream &read(istream &is, Sales_data &item)  //has been declared above, we define it here
+istream &read(istream &is, Sales_data &item)  //has been declared outside of class block, we define it here
 {
     double price = 0;
     is >> item.bookNo >> item.bookTitle >> item.units_sold >> price;
