@@ -9,10 +9,10 @@ myScreen.display(cout); cout << "\n"; */
 int main() 
 {   
     Screen emptyscreen ;
-    const Screen linescreen(1,3,'z');     // we are not going to use the set() on this Screen object. But we cannot also use move() on it!
+    const Screen linescreen(1,3,'z');     // we cannot use the set() on this Screen object. But we cannot also use move() on it!
     for(int i=0;i<3; ++i) { cout << linescreen.get(0,i) ; cout << "_"; } 
     cout<<endl;
-    //for(int i=0;i<3; ++i) { linescreen.move(0,i) ; cout<<linescreen.get() ; cout <<","; } //for const linescreen , this does not compile
+    //for(int i=0;i<3; ++i) { linescreen.move(0,i) ; cout<<linescreen.get() ; cout<<","; } //for const linescreen, this doesn't compile
     //cout<<endl;
     linescreen.display(cout); cout << "\n";   //trying the new way , using function display 
     Screen smallscreen(2, 5, 's');
