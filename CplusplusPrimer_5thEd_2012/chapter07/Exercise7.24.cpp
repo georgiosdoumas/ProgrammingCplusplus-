@@ -49,7 +49,7 @@ int main()
     for(int i=0;i<5; ++i) { cout << smallscreen.get(1,i) ; cout << "-"; }  // s-s-s-s-s-   this is the 2nd line
     cout<<endl;
     smallscreen.move(1,3) ;                     // placing cursor on 2nd line 4th position  
-    cout << smallscreen.get() ; cout << endl;   // prints z , of course
+    cout << smallscreen.get() ; cout << endl;   // prints s , of course
     smallscreen.move(0,4) ;                     // placing cursor on 1st line 5th position, last place on the line with character s
     cout << smallscreen.get() ; cout << endl;
     cout << smallscreen.get(0,6) ; cout << endl;  // even this prints s, we are actually on 2nd line 2nd position
