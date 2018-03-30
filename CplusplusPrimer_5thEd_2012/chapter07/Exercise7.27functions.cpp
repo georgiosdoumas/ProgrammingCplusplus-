@@ -32,3 +32,12 @@ Screen& Screen::set(pos r, pos col, char ch)
     contents[r*width + col] = ch; // set specified location to given value
     return *this;               // return this object as an lvalue
 }
+void Screen::screen_display(std::ostream &os) const 
+{
+	cout <<" Printing a window of rows:" <<height<< " and columns:" << width << std::endl;
+	for (size_t i=0; i<height;++i)
+	{
+		for(size_t j=0; j<width; ++j) os << contents[i*width+j] ;
+		os << "\n";
+	}
+}
