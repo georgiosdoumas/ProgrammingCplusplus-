@@ -23,13 +23,13 @@ class Screen {
         Screen& set(pos, pos, char);
         Screen &display(std::ostream &os) { do_display(os); return *this; }
         const Screen &display(std::ostream &os) const  { do_display(os); return *this; }
+        void screen_display(std::ostream &os) const; //extra function that I devised for 2-D printing 
         
     private:
         pos cursor = 0;
-        pos height {0}, width {0};
+        pos height {0}, width {0}; //height:how many rows? width:how many columns each row has?
         string contents;
         
         void do_display(std::ostream &os) const {os << contents;}
 };
 
-// 
