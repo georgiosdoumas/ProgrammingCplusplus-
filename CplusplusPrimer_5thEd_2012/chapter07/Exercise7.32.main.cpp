@@ -1,7 +1,10 @@
 /* Exercise 7.32: Define your own versions of Screen and Window_mgr in which
 clear() is a member of Window_mgr and a friend of Screen. */
 // Issues with the following implementation: 
-// I do not know how to add a 2nd Screen into a declared and initialized Window_mgr object.
+// I cannot add a Screen on-the-fly into a declared and initialized Window_mgr object,
+// meaning that I must declare and initialize a Scrren object, and then I can only add a copy if this object
+// into a Window_mgr vector, so any changes I do to the object do not affect the vector element
+// and similarly if I clear the vector element to reset its characters to '-' the Screen object is intact.
 #include "Exercise7.32.class.h"
 
 int main() 
