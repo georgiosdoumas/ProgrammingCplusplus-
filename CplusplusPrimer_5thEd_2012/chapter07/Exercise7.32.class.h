@@ -25,7 +25,7 @@ class Screen
 {
     friend void Window_mgr::clear(ScreenIndex); // clear() function can now access the private parts of class Screen
     public:
-      typedef string::size_type pos;
+      typedef string::size_type pos; // it is important to have it here so that next lines can mention the name pos
       Screen() = default;         
       Screen(pos ht, pos wd, char c): height(ht), width(wd), contents(ht * wd, c) { }
       char get() const { return contents[cursor]; }   // defined inside class, so automatically inline
