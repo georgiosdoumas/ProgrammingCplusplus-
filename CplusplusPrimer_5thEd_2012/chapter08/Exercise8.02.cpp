@@ -13,7 +13,8 @@ istream& my_readline_function(istream& my_input_stream)
 	string linebuffer;
 	while ( ! my_input_stream.eof())
 	{
-	   getline(cin, linebuffer);
+	   //getline(cin, linebuffer); // instead of this special case , we now do :
+	   getline(my_input_stream, linebuffer);
 	   cout << linebuffer;
 	   cout << ":";
 	}
@@ -26,7 +27,8 @@ istream& my_readword_function(istream& my_input_stream)
 	string wordbuffer;
 	while ( ! my_input_stream.eof())
 	{
-	   cin >> wordbuffer;
+	   //similar to what we would do with: cin >> wordbuffer; we will now do:
+	   my_input_stream >> wordbuffer;    
 	   cout << wordbuffer;
 	   cout << " ";
 	}
@@ -44,3 +46,4 @@ int main()
 	return 0;
 }
 // g++ -Wall -std=c++11 -o Exercise8.2 Exercise8.2.cpp 
+
