@@ -1,4 +1,4 @@
-, only/* Exercise 7.26: Define Sales_data::avg_price as an inline function.
+/* Exercise 7.26: Define Sales_data::avg_price as an inline function.
  The programs you’ve written to use Sales_data operations should still continue to work.
 Recompile those programs with your new class definition to verify that they still work. */
 // So what I am doing now is taking the file Exercise7.21main.cpp and modifying it.
