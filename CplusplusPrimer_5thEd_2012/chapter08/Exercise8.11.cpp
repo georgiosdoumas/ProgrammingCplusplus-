@@ -55,6 +55,6 @@ int main(int argc, char* argv[])
      }    
 return 0;
 }
-// g++ -Wall -std=c++11 -o Exercise8.11v1 Exercise8.11v1.cpp 
-// ./Exercise8.11v1 < phone_catalog.dat 
-// ./Exercise8.11v1 phone_catalog.dat 
+// g++ -Wall -std=c++11 -o Exercise8.11 Exercise8.11.cpp 
+// ./Exercise8.11 < phone_catalog.dat 
+// ./Exercise8.11 phone_catalog.dat 
