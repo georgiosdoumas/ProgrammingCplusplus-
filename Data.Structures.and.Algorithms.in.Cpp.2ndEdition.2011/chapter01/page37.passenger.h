@@ -24,10 +24,10 @@ class Passenger 		// Passenger (as a class)
    bool operator==( const Passenger& rhsPass) const;  //overloading the equality operator ==
 // . . . other member functions
   private:
-	 string name;		// passenger name
+	 string name;		   // passenger name
 	 MealType mealPref;		// meal preference
 	 bool isFreqFlyer;		// is a frequent flyer?
-	 long int freqFlyerNo;		// frequent flyer number
+	 long int freqFlyerNo;    // frequent flyer number. The book has this as string. For practice, I do t as long int
 };
 //The output operator can still be defined outside Class body
 ostream& operator<<(ostream& outstrm, const Passenger& pass) ;
