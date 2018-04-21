@@ -1,4 +1,4 @@
-#include "page6BaseDerivedClasses.h"
+#include "page06BaseDerivedClasses.h"
 
 void BaseClass::f(string s ) 
 {
