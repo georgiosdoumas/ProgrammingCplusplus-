@@ -13,6 +13,11 @@ class modernPerson
   	    pname = new string{nm};
 	    age = a;
     }
+    ~modernPerson()  		// destructor for the dynamically allocated pname
+    { 
+       cout << " Destroying " << *pname << " at position " << pname <<"!" << endl; 
+       if (pname != nullptr) delete pname; 
+    }
     string& getname() const { return *pname;}
     int getage() const { return age;}
     void setname(const string& nm ) { *pname = nm; }
@@ -23,18 +28,18 @@ class modernPerson
          *pname = *(mp.pname);
          age = mp.age;
     }
-	 modernPerson& operator=(const modernPerson& mp) // assignment operator 
-	 {
-	   if (this != &mp) // no assignment to itself;
-	   { 
-	     if (pname != nullptr)
+    modernPerson& operator=(const modernPerson& mp) // assignment operator 
+    {
+	if (this != &mp) // no assignment to itself;
+	{ 
+	   if (pname != nullptr)
 	         { delete pname; pname = nullptr; }
 	     pname = new string;
-       *pname = *(mp.pname);
+             *pname = *(mp.pname);
 	     age = mp.age;
-	   }
-	   return *this;
-	}    
+	 }
+	 return *this;
+    }    
 };
 
 ostream& operator<<(ostream& outstrm, const modernPerson& mp)
