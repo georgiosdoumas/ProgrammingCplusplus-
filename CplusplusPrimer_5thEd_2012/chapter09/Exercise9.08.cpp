@@ -9,7 +9,7 @@ using std::string; using std::list; using std::cout; using std::endl;
 int main()
 {
   string word;
-  list<string> boardGames { "chess", "go", "tic-tac-toe" };
+  list<string> boardGames { "chess", "go", "tic-tac-toe" };  // we can even declare it as:  list<string> const boardGames
   list<string>::const_iterator iterbg; 
   for (iterbg = boardGames.cbegin(); iterbg != boardGames.cend(); ++iterbg) 
   	 cout << *iterbg << " , " ;
