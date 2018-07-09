@@ -11,6 +11,8 @@ int main()
   std::cout << "The first list of deques has a size of : " << my_emptylist_of_deque_ints.size() << std::endl;
   if( !my_list_of_deque_ints.empty() )
     std::cout << "The second list of deques has a size of : "<< my_list_of_deque_ints.size() << std::endl;
+  my_emptylist_of_deque_ints = my_list_of_deque_ints; //ok we can do this!
+  std::cout << "After assigning 2nd to 1st, first list now has size: " << my_emptylist_of_deque_ints.size() << std::endl;
   return 0;
 }
 
