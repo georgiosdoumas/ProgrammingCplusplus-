@@ -43,6 +43,8 @@ int main()
 	  cout << "  Found it again!" << endl;
 	else 
 	  cout << " :12 does not exist in that part of the vector." << endl;  // we get this
+	
+	//Lets test the empty vector now (we will search for 0 but any other integer could be used):
 	if( searchInt(empty.begin(), empty.end(), 0) )
 	  cout << "  Found it!" << endl;
 	else cout << "  Does not exist, or you gave me an empty vector!" << endl;  // we get this output
