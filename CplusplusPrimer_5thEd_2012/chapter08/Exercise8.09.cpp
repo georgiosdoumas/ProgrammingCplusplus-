@@ -13,10 +13,11 @@ using std::cin; using std::cout; using std::endl; using std::string;
 std::istream& my_readline_function(std::istream& my_input_stream)
 {
 	string linebuffer;
+	//while(getline(my_input_stream, linebuffer))  // this pair of lines also works 
+	//  cout << linebuffer << ":";               // but lets be more elaborate and use the following 3 lines
 	while ( ! my_input_stream.eof() )
-	//while(getline(my_input_stream, linebuffer))  // this also works but ...
 	{
-	   getline(my_input_stream, linebuffer);       //... we would have to delete this line of course! 
+	   getline(my_input_stream, linebuffer);       
 	   cout << linebuffer << ":";
 	}
 	my_input_stream.clear();
