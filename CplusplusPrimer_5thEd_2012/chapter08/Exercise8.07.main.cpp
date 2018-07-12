@@ -10,7 +10,7 @@ int main(int argc, char * argv[])
     Sales_data full_book("123456789-F", 3, 38.8, "Effective C++"); //test usage of 3rd constructor.OK it compiles 
     print(cout , full_book) ; cout << endl;
     cout << "\tAfter testing the 2 constructors, we read form the file supplied in the command line " << endl;
-    if(argc == 1) //input file name passed with redirection < filename
+    if(argc == 1) //it means that an input file name passed with redirection: < filename, and output will go to console
     {
       Sales_data total(cin);  //using the 4th constructor for initialization: reading input e.g. from a file, or from console
       if( !total.isbn().empty() ) 
@@ -30,7 +30,7 @@ int main(int argc, char * argv[])
       } 
       else std::cerr << "No data?!" << endl;   
     }
-    else if (argc == 2) // input file passed as command line arg
+    else if (argc == 2) // input file passed as command line arg, and output will go to console
     {
       ifstream input_file(argv[1]);
       Sales_data total;
@@ -51,7 +51,7 @@ int main(int argc, char * argv[])
        } else									// there was no input
 	  cerr << "No data?!" << endl;
      }
-     else if (argc == 3) // input and output files passed as command line args
+     else if (argc == 3) // input and output files passed as command line args (output will not go to console)
      {
        ifstream input_file(argv[1]);
        std::ofstream output_file(argv[2]);
