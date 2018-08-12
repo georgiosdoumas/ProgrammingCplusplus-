@@ -1,0 +1,56 @@
+/* Exercise 10.22: Rewrite the program to count words of size 6 or less using functions
+in place of the lambdas. */
+// Using Exercise 10.16.cpp as a starting point
+
+#include <iostream>
+#include <vector>
+#include <string>
+#include <algorithm>
+#include <functional>   //for bind 
+using namespace std;
+using namespace std::placeholders;
+
+string make_plural(size_t ctr, const string &word, const string &ending)
+{ return (ctr > 1) ? word + ending : word; }
+
+bool check_size(const string &s, string::size_type l)
+{ return s.size() >= l; }
+
+void elimDups(vector<string> &words)
+{
+  sort(words.begin(), words.end()); // sort words alphabetically so we can find the duplicates
+  auto end_unique = unique(words.begin(), words.end());
+// erase uses a vector operation to remove the nonunique elements
+  words.erase(end_unique, words.end());
+}
+
+void biggies(vector<string> &words, vector<string>::size_type sz)
+{
+  elimDups(words); // put words in alphabetical order and remove duplicates
+// sort words by size, but maintain alphabetical order for words of the same size
+  stable_sort(words.begin(), words.end(), [](const string &a, const string &b)
+   { return a.size() < b.size();});
+// get an iterator to the first element whose size() is >= sz
+  auto wc = find_if(words.begin(), words.end(), bind(check_size, _1, sz));
+// compute the number of elements with size >= sz
+  auto count = words.end() - wc;
+  cout << count << " " << make_plural(count, "word", "s") << " of length " << sz << " or longer" << endl;
+// print words of the given size or longer, each one followed by a space
+  for_each(wc, words.end(), [](const string &s){cout << s << " ";});
+  cout << endl;
+}
+
+int main()
+{
+  vector<string>::size_type length;
+  cout << "Enter an integer to specify what length (how many letters) should be the words you are interested in:";
+  cin >> length;
+  cout << "Enter some lines of text (finish your input by ctrl+d):";
+  vector<string> text;
+  string word;
+  while(cin>> word) text.push_back(word);
+  biggies(text, length);
+  return 0;
+}
+
+// g++ -Wall -std=c++11 Exercise10.22.cpp -o Exercise10.22
