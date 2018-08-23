@@ -13,7 +13,7 @@ int main(int argc, char* argv[])
 {
   std::map<string, size_t> word_count; // empty map from string to size_t
   std::set<string> exclude = {"aha", "wow", "oups", "hey"};
-  string word, inpFilename;
+  string word;
   cout << " Enter your text (finish with ctrl+d)";
   while (cin >> word)
   {
