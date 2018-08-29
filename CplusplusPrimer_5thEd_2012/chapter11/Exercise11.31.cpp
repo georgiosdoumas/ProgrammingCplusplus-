@@ -30,7 +30,8 @@ int main()
   getline(cin, eraseAuthor);
   auto cnt = authors.erase(eraseAuthor);
   if(cnt == 0 ) cout << " Author not found. Nothing was erased" << endl;
-  else for(auto elem : authors)
+  else  cout << cnt << " books were written by " << eraseAuthor << " and were deleted." << endl; 
+  for(auto elem : authors)
     cout << elem.first << " has written: " << elem.second << endl;
   return 0;
 }
