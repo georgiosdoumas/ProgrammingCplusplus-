@@ -24,16 +24,29 @@ int main()
    }
   for(auto elem : authors)
     cout << elem.first << " has written: " << elem.second << endl;
+
   cout << " Enter the Name Surname of author you want to be removed from the list:";
   string eraseAuthor;
-
   getline(cin, eraseAuthor);
+  // This is a way to do it using find() as the book wants:
+  auto entries = authors.count(eraseAuthor);
+  auto iter = authors.find(eraseAuthor);
+  while(entries)
+  {
+    authors.erase(iter);
+    ++iter;
+    --entries;
+  }
+  /* This is a simpler (for me) way to achieve the erasure:
   auto cnt = authors.erase(eraseAuthor);
   if(cnt == 0 ) cout << " Author not found. Nothing was erased" << endl;
-  else  cout << cnt << " books were written by " << eraseAuthor << " and were deleted." << endl; 
+  else cout << cnt << " books were written by " << eraseAuthor << " and were deleted." << endl;
+  */ // I tested it and it seems to work fine, either for authors that exists, or for authors that do not exist.
+
   for(auto elem : authors)
     cout << elem.first << " has written: " << elem.second << endl;
   return 0;
 }
 
 // g++ -Wall -std=c++11 Exercise11.31.cpp -o Exercise11.31
+
