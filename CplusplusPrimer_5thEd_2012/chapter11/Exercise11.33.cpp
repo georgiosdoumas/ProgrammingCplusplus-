@@ -50,7 +50,7 @@ void word_transform(ifstream &map_file, ifstream &input_file)
          else
            cout << " "; // print a space between words
         // transform returns its first argument or its transformation
-        cout << transform(word, trans_map); // print the output
+        cout << transform(word, trans_map); // print the output: either the original word, or its substitution phrase
       }
       cout << endl;   // done with this line of input
    }
