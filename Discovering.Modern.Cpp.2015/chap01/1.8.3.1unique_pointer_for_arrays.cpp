@@ -38,3 +38,10 @@ void vector_multiply(int size, const double* arr1, const double* arr2, double* r
 }
 
 // /usr/bin/g++ -Wall -Wextra -std=c++11 1.8.3.1unique_pointer_for_arrays.cpp -o 1.8.3.1unique_pointer_for_arrays
+/* You should have a file with this content : cat tepms.dat 
+4
+32.4 78.34
+31.0 65.89
+28.9 92.01
+29.8 87.82
+and give the name temps.dat when asked */
