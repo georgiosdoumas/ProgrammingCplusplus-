@@ -21,7 +21,7 @@ class ArithProgression : public Progression  // derived class : arithmetic progr
     ArithProgression(long i = 1);		// constructor, default increment 1
   protected:
     virtual long nextValue();			// advance to next value
-  private:					// but this can be private. The book example still keeps it protected
+  private:					// but inc can be private. The book example still keeps it protected
     long inc;					// inc is the distance between 2 successive values
 };
 
@@ -31,7 +31,7 @@ class GeomProgression : public Progression  // derived class : geometric progres
 	 GeomProgression(long b = 2);		// constructor with default multiplier 
   protected:
 	 virtual long nextValue();         // advance
-  private:	  //again, this can be private (if there will be no derived classes form Geom no need to have it protected)
+  private:	  //again, base be private (if there will be no derived classes from GeomProgression no need to have it protected)
     long base;				// base value
 };
 
