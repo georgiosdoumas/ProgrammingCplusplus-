@@ -16,7 +16,7 @@ Student::Student(const string& nm, const string& id, const string& maj, int year
 void Student::print() 		// definition of Student print
 {
   Person::print();			// first print Person information
-  cout << " Major " << Major << endl;
+  cout << " Major " << Major << endl;   // then continue with special information that is present only on derived class
   cout << " Year  " << gradYear << endl;
 }
 void Student::changeMajor(const string& newMajor)
