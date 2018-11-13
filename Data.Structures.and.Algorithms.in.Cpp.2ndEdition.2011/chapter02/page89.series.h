@@ -32,7 +32,7 @@ class GeomProgression : public Progression  // derived class : geometric progres
   protected:
 	 virtual long nextValue();         // advance
   private:	  //again, base be private (if there will be no derived classes from GeomProgression no need to have it protected)
-    long base;				// base value
+    long base;				// base value is the multiplier for the next element of Geometric progression
 };
 
 class FibonacciProgression : public Progression  // derived class : Fibonacci progression
