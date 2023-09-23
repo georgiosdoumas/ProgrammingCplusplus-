@@ -67,5 +67,14 @@ Bases:4 Deriveds:2
   Exiting foo(), so 1 local object will be destroyed!
 After calling foo(): 
 Bases:2 Deriveds:1
-  */ 
+
+   //If we neglect the virtual for the destructor of the Base, here is the output with the wrong numbers: 
+Before entering foo(): Bases:2 Deriveds:1
+Base::a()
+Derived::b()
+Bases:4 Deriveds:3
+  Exiting foo(), so 1 local object will be destroyed!
+After calling foo(): 
+Bases:2 Deriveds:2
+*/ 
 
