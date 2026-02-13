@@ -5,7 +5,6 @@ assuming you are a complete beginner to the language (even that you do not know 
 
 # TIER 1
 
-**Core Books**
 - *C++ How to Program*, Deitel, 11th edition (2023) : CHTP  
 - *Big C++ Late Objects* (2017 edition) : BCLO  
 - *Programming and Problem Solving with C++*, 7th ed. (2022) : PAPS  
@@ -26,7 +25,7 @@ assuming you are a complete beginner to the language (even that you do not know 
 3) **DAPS** all  
    **CHTP** chapters 16–21  
 
-### Bonus Books
+### Bonus Books select 1 or more according to your interests
 - *Getting Started with Qt5* (2019)  
 - *Beginning C++ Game Programming*, 3rd Ed. (2024)  
 - *Beginning C++: From Beginner to Pro*, 7th edition (2023)  
