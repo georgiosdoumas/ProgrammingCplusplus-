@@ -21,11 +21,16 @@ TIER 1
    CHTP chapter 16-21
 
 - Bonus book(s) according to your special interests:
- -Geting started with Qt5, 2019
- -Beginning C++ Game Programming 3rdEd. 2024
- -Beginning C++ from beginner to Pro, 7th edition 2023
- -Discovering Modern C++ , 2nd edition , 2021
- -Introduction to C++ , 500 exercises , 2022
+
+ Geting started with Qt5, 2019
+ 
+ Beginning C++ Game Programming 3rdEd. 2024
+ 
+ Beginning C++ from beginner to Pro, 7th edition 2023
+ 
+ Discovering Modern C++ , 2nd edition , 2021
+ 
+ Introduction to C++ , 500 exercises , 2022
 
 
 TIER 2
