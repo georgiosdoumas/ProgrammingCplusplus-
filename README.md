@@ -60,11 +60,11 @@ assuming you are a complete beginner to the language (even that you do not know 
 
 # TIER 3
 
-9) *API Design for C++*, 2nd Ed. (2024)  
-10) *Refactoring with C++* (2024)  
-11) *Object-Oriented Software Design in C++* (2024)  
-12) *Modern C++ Programming Cookbook*, 3rd Edition (2023)  
-13) *C++ Memory Management* (2025)  
+8) *API Design for C++*, 2nd Ed. (2024)  
+9) *Refactoring with C++* (2024)  
+10) *Object-Oriented Software Design in C++* (2024)  
+11) *Modern C++ Programming Cookbook*, 3rd Edition (2023)  
+12) *C++ Memory Management* (2025)  
 
 ### Bonus Books
 - *Hands-On Functional Programming with C++* (2019)  
@@ -78,10 +78,10 @@ assuming you are a complete beginner to the language (even that you do not know 
 
 # TIER 4
 
-12) *Concurrency with Modern C++* (2024)  
-13) *Hands-On Design Patterns with C++*, 2nd Ed. (2023)  
-14) *Template Metaprogramming with C++* (2022)  
-15) *C++ Software Design: Principles and Patterns for High-Quality Software* (2022)  
+13) *Concurrency with Modern C++* (2024)  
+14) *Hands-On Design Patterns with C++*, 2nd Ed. (2023)  
+15) *Template Metaprogramming with C++* (2022)  
+16) *C++ Software Design: Principles and Patterns for High-Quality Software* (2022)  
 
 ### Bonus Books
 - *C++ Concurrency in Action*, 2nd Ed. (2019)  
