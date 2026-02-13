@@ -3,7 +3,6 @@ Notes from books about C++
 Here is a good (in my opinion) list of books to study and (more important!) the order in which to study them, to learn C++ well,
 assuming you are a complete beginner to the language (even that you do not know C):
 
-'''
 TIER 1
 * C++ How to Program, Deitel, 11th edition 2023 : CHTP
 * Big C++ Late Objects (2017 edition) : BCLO
@@ -22,11 +21,11 @@ TIER 1
    CHTP chapter 16-21
 
 - Bonus book(s) according to your special interests:
- Geting started with Qt5, 2019
- Beginning C++ Game Programming 3rdEd. 2024
- Beginning C++ from beginner to Pro, 7th edition 2023
- Discovering Modern C++ , 2nd edition , 2021
- Introduction to C++ , 500 exercises , 2022
+ -Geting started with Qt5, 2019
+ -Beginning C++ Game Programming 3rdEd. 2024
+ -Beginning C++ from beginner to Pro, 7th edition 2023
+ -Discovering Modern C++ , 2nd edition , 2021
+ -Introduction to C++ , 500 exercises , 2022
 
 
 TIER 2
