@@ -34,19 +34,19 @@ TIER 1
 
 
 TIER 2
-4) Professional C++ 2021 (or 2024 edition) part I, II (chap 1 - 6)
-   Deciphering Object-Oriented Programming with C++ 2ndEd 2022 (chap 1 - 15)
-5) Effective modern C++ 2014
-6) Professional C++ 2021 (or from 2024 edition) chapter 7 to the end.
-   Deciphering Object-Oriented Programming with C++ 2ndEd 2022 (chap 16 to the end)
-7) Data Structures and algorithm analysis in C++, 4th Ed 2013
+4) *Professional C++ 2021 (or 2024 edition) part I, II (chap 1 - 6)
+   *Deciphering Object-Oriented Programming with C++ 2ndEd 2022 (chap 1 - 15)
+5) *Effective modern C++ 2014
+6) *Professional C++ 2021 (or from 2024 edition) chapter 7 to the end.
+   *Deciphering Object-Oriented Programming with C++ 2ndEd 2022 (chap 16 to the end)
+7) *Data Structures and algorithm analysis in C++, 4th Ed 2013
 
 - Bonus Book(s)
- C++ High performance, 2ndEd. 2022
- Functional programming in C++ 2018
- Game Programming in C++: Creating 3D Games 2018
- Qt6 C++ GUI Programming Cookbook, 3rd Edition 2024
- The C++ Programming language 4th Edition 2013 (3rd printing)
+ *C++ High performance, 2ndEd. 2022
+ *Functional programming in C++ 2018
+ *Game Programming in C++: Creating 3D Games 2018
+ *Qt6 C++ GUI Programming Cookbook, 3rd Edition 2024
+ *The C++ Programming language 4th Edition 2013 (3rd printing)
 
 
 TIER 3
@@ -75,4 +75,3 @@ TIER 4
  C++17 Templates, the Complete Guide
  C++20 get the details 2023
 
-'''
