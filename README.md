@@ -3,6 +3,7 @@ Notes from books about C++
 Here is a good (in my opinion) list of books to study and (more important!) the order in which to study them, to learn C++ well,
 assuming you are a complete beginner to the language (even that you do not know C):
 
+'
 TIER 1
 * C++ How to Program, Deitel, 11th edition 2023 : CHTP
 * Big C++ Late Objects (2017 edition) : BCLO
@@ -70,4 +71,4 @@ TIER 4
  C++17 Templates, the Complete Guide
  C++20 get the details 2023
 
-
+'
